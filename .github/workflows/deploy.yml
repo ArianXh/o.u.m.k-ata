@@ -1,0 +1,45 @@
+name: Deploy Website
+
+on:
+  push:
+    branches:
+      - main  # Trigger deployment only on pushes to the 'main' branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the repository
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    # Step 2: Set up Node.js environment
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    # Step 3: Install dependencies and build
+    - name: Install Dependencies
+      working-directory: o.u.m.k-ata
+      run: npm install
+
+    - name: Build the Project
+      working-directory: o.u.m.k-ata
+      run: npm run build
+
+      # Confirm build folder exists
+    - name: Verify Build Directory
+      working-directory: o.u.m.k-ata  # Navigate into the project folder
+      run: ls -la build/
+
+    # Step 4: Deploy to FTP server
+    - name: Deploy via FTP
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: o.u.m.k-ata/build/  # Correct path to build directory
+        server-dir: ${{ secrets.FTP_PATH }}
