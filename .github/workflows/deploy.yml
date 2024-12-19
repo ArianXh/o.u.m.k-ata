@@ -22,16 +22,13 @@ jobs:
 
     # Step 3: Install dependencies and build
     - name: Install Dependencies
-      working-directory: o.u.m.k-ata
       run: npm install
 
     - name: Build the Project
-      working-directory: o.u.m.k-ata
       run: npm run build
 
       # Confirm build folder exists
     - name: Verify Build Directory
-      working-directory: o.u.m.k-ata  # Navigate into the project folder
       run: ls -la build/
 
     # Step 4: Deploy to FTP server
