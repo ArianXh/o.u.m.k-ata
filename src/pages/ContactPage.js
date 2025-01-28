@@ -82,17 +82,17 @@ const ContactPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <h3 className="text-lg font-bold text-blue-600">{t('Локација')}</h3>
-              <p className="mt-2 text-gray-700">FHH5+Q8Q, Centar Zhupa</p>
+              <p className="mt-2 text-gray-700">Центар Жупа б,б Центар Жупа</p>
             </div>
             <div className="text-center">
               <h3 className="text-lg font-bold text-blue-600">{t('Јави се')}</h3>
-              <p className="mt-2 text-gray-700">{t('Телефон')}: 046 840 315</p>
-              <p className="mt-1 text-gray-700">{t('Факс')}: 046 840 315</p>
+              <p className="mt-2 text-gray-700">{t('Телефон')}: 046 840 117</p>
+              <p className="mt-1 text-gray-700">{t('Факс')}: 046 840 117</p>
             </div>
             <div className="text-center">
               <h3 className="text-lg font-bold text-blue-600">{t('Прати емаил')}</h3>
-              <p className="mt-2 text-gray-700">sou-ata-centarzhupa@schools.mk</p>
-              <p className="mt-1 text-gray-700">ortaokulata@hotmail.com</p>
+              <p className="mt-2 text-gray-700">ouataturk@yahoo.com</p>
+              <p className="mt-1 text-gray-700">ou-mustafakemalataturk-centarzhupa@schools.mk</p>
             </div>
           </div>
         </div>

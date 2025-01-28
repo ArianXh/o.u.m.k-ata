@@ -22,17 +22,17 @@ const AboutSection = () => {
             </p>
           </div>
           <div className="bg-white rounded-lg shadow-md p-6 text-center">
-            <h3 className="text-2xl font-semibold text-gray-700">Our Mission</h3>
+            <h3 className="text-2xl font-semibold text-gray-700">Наша Мисија</h3>
             <p className="mt-4 text-gray-600">
-              To provide students with the tools and confidence to achieve their dreams and excel
-              in life.
+            ООУ„Мустафа Кемал Ататурк“ е ваш дом, катче на соживот, меѓуетничка толеранција и заемна почит, во овој простор, каде што се спојуваат воспитанието, образованието и хуманите вредности, со нашиот висококвалитетен кадар сигурно 
+            чекориме кон иднината. 
             </p>
           </div>
           <div className="bg-white rounded-lg shadow-md p-6 text-center">
-            <h3 className="text-2xl font-semibold text-gray-700">Our Values</h3>
+            <h3 className="text-2xl font-semibold text-gray-700">Наша Визија</h3>
             <p className="mt-4 text-gray-600">
-              Integrity, respect, and innovation are the cornerstones of everything we do at ATA
-              School.
+            Нашата визија е да бидеме водечко училиште кое обезбедува иновативно, инклузивно и инспиративно образование. Преку негување на љубопитноста, 
+            креативноста и критичкото размислување, ги подготвуваме учениците да станат самоуверени, одговорни и успешни граѓани на глобалната заедница. 
             </p>
           </div>
         </div>
