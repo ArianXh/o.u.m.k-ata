@@ -1,10 +1,13 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const NewsEvents = ({ news }) => {
+  const { t } = useTranslation();
+  
   return (
-    <section className="news-events py-8">
+    <section className="news-events py-20">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-6">News & Events</h2>
+        <h2 className="text-3xl font-bold mb-6">{t("Вести & Настани")}</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {news.map(item => (
             <div key={item.id} className="bg-white shadow-md p-4 rounded-lg">
