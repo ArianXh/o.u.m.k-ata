@@ -7,6 +7,7 @@ import ContactPage from './pages/ContactPage';
 import GalleryPage from './pages/GalleryPage';
 import NewsPage from './pages/NewsPage';
 import ProgramsPage from './pages/ProgramsPage';
+import ActivitiesPage from './pages/ActivitiesPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path='/gallery' element={< GalleryPage />} />
       <Route path='/news' element={< NewsPage />} />
       <Route path='/programs' element={< ProgramsPage />} />
+      <Route path='/activities' element={< ActivitiesPage />} />
     </Routes>
   </Router>
   );

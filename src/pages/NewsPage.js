@@ -94,7 +94,8 @@ const NewsPage = () => {
         </div>
       </section>
 
-      {/* Subscribe Section */}
+      
+      {/* Subscribe Section 
       <section className="py-12 bg-gray-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold">Stay Updated</h2>
@@ -116,6 +117,7 @@ const NewsPage = () => {
           </form>
         </div>
       </section>
+      */}
       <Footer />
     </div>
   );

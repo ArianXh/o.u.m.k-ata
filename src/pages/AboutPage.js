@@ -53,9 +53,9 @@ const AboutPage = () => {
       </section>
 
       {/* Tabs Section */}
-      <section className="py-12 bg-gray-100">
+      <section id="teamSection" className="py-12 bg-gray-100">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-gray-800 text-center">{t("Нашиот Тим")}</h2>
+          <h2 className="text-4xl font-bold text-gray-800 text-center">{t("Кадар")}</h2>
 
           {/* Tabs Navigation */}
           <div className="flex justify-center space-x-4 mt-8">
@@ -87,7 +87,7 @@ const AboutPage = () => {
             {activeTab === "technical" && <TeamSection teamData={technicalStaff} />}
           </div>
         </div>
-      </section>
+    </section>
 
       <Footer />
     </div>
