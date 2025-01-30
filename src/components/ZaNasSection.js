@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-const AboutSection = () => {
+const ZaNasSection = () => {
 
   const { t } = useTranslation();
 
@@ -33,4 +33,4 @@ const AboutSection = () => {
   );
 };
 
-export default AboutSection;
+export default ZaNasSection;

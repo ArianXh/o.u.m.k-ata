@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 import { useTranslation } from 'react-i18next';
 
 import { 
@@ -9,7 +9,7 @@ import {
   getSchoolBoard,
   getTechnicalStaff,
   getEducationalStaff
-} from '../helpers/StaffData';
+} from '../../helpers/StaffData';
 
 const AboutPage = () => {
   const [activeTab, setActiveTab] = useState("administrative");

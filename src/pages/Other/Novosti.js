@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 
-const NewsPage = () => {
+const Novosti = () => {
   const featuredNews = {
     title: "ATA School Wins Regional Innovation Award!",
     description:
@@ -123,4 +123,4 @@ const NewsPage = () => {
   );
 };
 
-export default NewsPage;
+export default Novosti;

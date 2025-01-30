@@ -1,15 +1,15 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import HeroSlider from '../components/HeroSlider';
-import AboutSection from '../components/AboutSection';
-import NewsEvents from '../components/NewsEvents';
-import Footer from '../components/Footer';
-import ProgramsList from '../components/ProgramsList';
-import GalleryPreview from '../components/GalleryPreview';
+import Navbar from '../../components/Navbar';
+import HeroSlider from '../../components/HeroSlider';
+import ZaNasSection from '../../components/ZaNasSection';
+import ListaNovosti from '../../components/ListaNovosti';
+import Footer from '../../components/Footer';
+import ListaProgrami from '../../components/ListaProgrami';
+import GalleryPreview from '../../components/GalleryPreview';
 
 
 
-const HomePage = () => {
+const Pocetna = () => {
 
   const news = [
     { id: 1, title: "Open Enrollment", excerpt: "Enroll for the 2024 academic year today!" },
@@ -34,9 +34,9 @@ const HomePage = () => {
       <Navbar />
 
       <HeroSlider />
-      <AboutSection />
-      <NewsEvents news={news} />
-      <ProgramsList />
+      <ZaNasSection />
+      <ListaNovosti news={news} />
+      <ListaProgrami />
       <GalleryPreview images={sampleImages} title="Gallery Highlights" />
 
       <Footer />
@@ -44,4 +44,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default Pocetna;

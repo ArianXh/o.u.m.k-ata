@@ -1,13 +1,13 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 import { FaBook } from "react-icons/fa6";
 import { useTranslation } from 'react-i18next';
 
-const ActivitiesPage = () => {
+const Programi = () => {
   const { t } = useTranslation();
 
-  const activities = [
+  const programs = [
     {
       title: t("Календар за организација и работата во основното училиште"),
     },
@@ -49,7 +49,7 @@ const ActivitiesPage = () => {
       {/* Hero Section */}
       <section className="bg-blue-800 text-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold">{t("Активности")}</h1>
+          <h1 className="text-4xl font-bold">{t("Планови и програми")}</h1>
         </div>
       </section>
 
@@ -57,16 +57,16 @@ const ActivitiesPage = () => {
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {activities.map((activity, index) => (
+            {programs.map((program, index) => (
               <div
                 key={index}
                 className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg hover:bg-blue-800 transition-shadow duration-300 text-center"
               >
                 <FaBook size={50} color='blue' />
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-800">{activity.title}</h3>
-                  <p className="text-sm text-gray-500">{activity.duration}</p>
-                  <p className="mt-4 text-gray-600">{activity.description}</p>
+                  <h3 className="text-xl font-semibold text-gray-800">{program.title}</h3>
+                  <p className="text-sm text-gray-500">{program.duration}</p>
+                  <p className="mt-4 text-gray-600">{program.description}</p>
                 </div>
               </div>
             ))}
@@ -100,4 +100,4 @@ const ActivitiesPage = () => {
   );
 };
 
-export default ActivitiesPage;
+export default Programi;

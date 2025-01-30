@@ -20,8 +20,23 @@ const Navbar = () => {
           </li>
 
           {/* "За Нас" with Submenu */}
-          <li>
-            <Link to="/about" className="hover:text-blue-300">{t('За Нас')}</Link>
+          <li className="relative group">
+            {t('За Нас')} ▼
+            <ul className="absolute left-0 bg-white text-black shadow-lg rounded-lg py-2 w-48 
+              hidden group-hover:flex flex-col group-hover:pointer-events-auto pointer-events-none transition duration-300">
+              <li>
+                <Link to="/za-ucilisteto" className="block px-4 py-2 hover:bg-gray-200">{t('За училиштето')}</Link>
+              </li>
+              <li>
+                <Link to="/za-ucilisteto/patron" className="block px-4 py-2 hover:bg-gray-200">{t('За патронот')}</Link>
+              </li>
+              <li>
+                <Link to="/za-ucilisteto/vraboteni" className="block px-4 py-2 hover:bg-gray-200">{t('Вработени')}</Link>
+              </li>
+              <li>
+                <Link to="/za-ucilisteto/organi" className="block px-4 py-2 hover:bg-gray-200">{t('Училишни органи')}</Link>
+              </li>
+            </ul>
           </li>
 
           {/* "Програми" with Submenu */}
@@ -30,28 +45,25 @@ const Navbar = () => {
             <ul className="absolute left-0 bg-white text-black shadow-lg rounded-lg py-2 w-48 
               hidden group-hover:flex flex-col group-hover:pointer-events-auto pointer-events-none transition duration-300">
               <li>
-                <Link to="/teaching/kindergarten" className="block px-4 py-2 hover:bg-gray-200">{t('Распоред на часови')}</Link>
+                <Link to="/nastava/raspored-na-casovi" className="block px-4 py-2 hover:bg-gray-200">{t('Распоред на часови')}</Link>
               </li>
               <li>
-                <Link to="/teaching/primary" className="block px-4 py-2 hover:bg-gray-200">{t('Дополнителна настава')}</Link>
+                <Link to="/nastava/dopolnitelna-nastava" className="block px-4 py-2 hover:bg-gray-200">{t('Дополнителна настава')}</Link>
               </li>
               <li>
-                <Link to="/programs/secondary" className="block px-4 py-2 hover:bg-gray-200">{t('Додатна настава')}</Link>
+                <Link to="/nastava/dodatna-nastava" className="block px-4 py-2 hover:bg-gray-200">{t('Додатна настава')}</Link>
               </li>
               <li>
-                <Link to="/teaching/kindergarten" className="block px-4 py-2 hover:bg-gray-200">{t('Приемни денови')}</Link>
+                <Link to="/nastava/priemni-denovi" className="block px-4 py-2 hover:bg-gray-200">{t('Приемни денови')}</Link>
               </li>
               <li>
-                <Link to="/teaching/primary" className="block px-4 py-2 hover:bg-gray-200">{t('Распоред на ѕвонење')}</Link>
+                <Link to="/nastava/raspored-na-zvonenje" className="block px-4 py-2 hover:bg-gray-200">{t('Распоред на ѕвонење')}</Link>
               </li>
               <li>
-                <Link to="/programs/secondary" className="block px-4 py-2 hover:bg-gray-200">{t('Додатна настава')}</Link>
+                <Link to="/nastava/ekskurzii" className="block px-4 py-2 hover:bg-gray-200">{t('Екскурзии')}</Link>
               </li>
               <li>
-                <Link to="/programs/secondary" className="block px-4 py-2 hover:bg-gray-200">{t('Екскурзии')}</Link>
-              </li>
-              <li>
-                <Link to="/programs/secondary" className="block px-4 py-2 hover:bg-gray-200">{t('Изборни предмети')}</Link>
+                <Link to="/nastava/izborni-predmeti" className="block px-4 py-2 hover:bg-gray-200">{t('Изборни предмети')}</Link>
               </li>
             </ul>
           </li>
@@ -62,64 +74,65 @@ const Navbar = () => {
             <ul className="absolute left-0 bg-white text-black shadow-lg rounded-lg py-2 w-48 
               hidden group-hover:flex flex-col group-hover:pointer-events-auto pointer-events-none transition duration-300">
               <li>
-                <Link to="/teaching/kindergarten" className="block px-4 py-2 hover:bg-gray-200">{t('Огласи')}</Link>
+                <Link to="/dokumenti/oglasi" className="block px-4 py-2 hover:bg-gray-200">{t('Огласи')}</Link>
               </li>
               <li>
-                <Link to="/teaching/primary" className="block px-4 py-2 hover:bg-gray-200">{t('Интерни акти')}</Link>
+                <Link to="/dokumenti/interni-akti" className="block px-4 py-2 hover:bg-gray-200">{t('Интерни акти')}</Link>
               </li>
               <li>
-                <Link to="/teaching/kindergarten" className="block px-4 py-2 hover:bg-gray-200">{t('Упис првачиња')}</Link>
+                <Link to="/dokumenti/upis-prvacinja" className="block px-4 py-2 hover:bg-gray-200">{t('Упис првачиња')}</Link>
               </li>
               <li>
-                <Link to="/teaching/primary" className="block px-4 py-2 hover:bg-gray-200">{t('Годишна програма')}</Link>
+                <Link to="/dokumenti/godisna-programa" className="block px-4 py-2 hover:bg-gray-200">{t('Годишна програма')}</Link>
               </li>
               <li>
-                <Link to="/teaching/kindergarten" className="block px-4 py-2 hover:bg-gray-200">{t('Развоен план')}</Link>
+                <Link to="/dokumenti/razvoen-plan" className="block px-4 py-2 hover:bg-gray-200">{t('Развоен план')}</Link>
               </li>
               <li>
-                <Link to="/teaching/primary" className="block px-4 py-2 hover:bg-gray-200">{t('Самоевалуација на училиште')}</Link>
+                <Link to="/dokumenti/samoevaluacija" className="block px-4 py-2 hover:bg-gray-200">{t('Самоевалуација на училиште')}</Link>
               </li>
               <li>
-                <Link to="/teaching/kindergarten" className="block px-4 py-2 hover:bg-gray-200">{t('Финансии')}</Link>
+                <Link to="/dokumenti/finansii" className="block px-4 py-2 hover:bg-gray-200">{t('Финансии')}</Link>
               </li>
               <li>
-                <Link to="/teaching/primary" className="block px-4 py-2 hover:bg-gray-200">{t('Други документи')}</Link>
-                <li>
-                <Link to="/teaching/kindergarten" className="block px-4 py-2 hover:bg-gray-200">{t('Обуки')}</Link>
+                <Link to="/dokumenti/drugi" className="block px-4 py-2 hover:bg-gray-200">{t('Други документи')}</Link>
+              </li>
+              <li>
+                <Link to="/dokumenti/obuki" className="block px-4 py-2 hover:bg-gray-200">{t('Обуки')}</Link>
               </li>
 
-              </li>
+
             </ul>
           </li>
 
           <li className="relative group">
-            <Link to="/activities" className="hover:text-blue-300">{t('Активности')} ▼</Link>
+            {t('Активности')} ▼
               <ul className="absolute left-0 bg-white text-black shadow-lg rounded-lg py-2 w-48 
                 hidden group-hover:flex flex-col group-hover:pointer-events-auto pointer-events-none transition duration-300">
                 <li>
-                  <Link to="/activities/kindergarten" className="block px-4 py-2 hover:bg-gray-200">{t('Воннаставни активности')}</Link>
+                  <Link to="/aktivnosti/vonnastavni-aktivnosti" className="block px-4 py-2 hover:bg-gray-200">{t('Воннаставни активности')}</Link>
                 </li>
                 <li>
-                  <Link to="/activities/primary" className="block px-4 py-2 hover:bg-gray-200">{t('Ученичка заедница')}</Link>
+                  <Link to="/aktivnosti/ucenicka-zaednica" className="block px-4 py-2 hover:bg-gray-200">{t('Ученичка заедница')}</Link>
                 </li>
                 <li>
-                  <Link to="/activities/secondary" className="block px-4 py-2 hover:bg-gray-200">{t('Вонучилишни активности')}</Link>
+                  <Link to="/aktivnosti/vonucilisni-aktivnosti" className="block px-4 py-2 hover:bg-gray-200">{t('Вонучилишни активности')}</Link>
                 </li>
               </ul>
           </li>
 
           <li>
-            <Link to="/programs" className="hover:text-blue-300">{t('Програми')}</Link>
+            <Link to="/programi" className="hover:text-blue-300">{t('Програми')}</Link>
           </li>
 
           <li>
-            <Link to="/gallery" className="hover:text-blue-300">{t('Галерија')}</Link>
+            <Link to="/galerija" className="hover:text-blue-300">{t('Галерија')}</Link>
           </li>
           <li>
-            <Link to="/news" className="hover:text-blue-300">{t('Новости')}</Link>
+            <Link to="/novosti" className="hover:text-blue-300">{t('Новости')}</Link>
           </li>
           <li>
-            <Link to="/contact" className="hover:text-blue-300">{t('Контакт')}</Link>
+            <Link to="/kontakt" className="hover:text-blue-300">{t('Контакт')}</Link>
           </li>
         </ul>
 

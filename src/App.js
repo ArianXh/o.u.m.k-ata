@@ -1,25 +1,28 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import ContactPage from './pages/ContactPage';
-import GalleryPage from './pages/GalleryPage';
-import NewsPage from './pages/NewsPage';
-import ProgramsPage from './pages/ProgramsPage';
-import ActivitiesPage from './pages/ActivitiesPage';
+import Pocetna from "./pages/Other/Pocetna";
+import Kontakt  from './pages/Other/Kontakt';
+import Galerija from './pages/Other/Galerija';
+import Programi from './pages/Other/Programi';
+import Novosti from './pages/Other/Novosti';
+
+import ZaNas from './pages/ZaNas/ZaNas';
+import Aktivnosti from './pages/Aktivnosti/Aktivnosti';
+
 
 function App() {
   return (
     <Router>
     <Routes>
-      <Route path='/' element={< HomePage />} />
-      <Route path='/about' element={< AboutPage />} />
-      <Route path='/contact' element={< ContactPage />} />
-      <Route path='/gallery' element={< GalleryPage />} />
-      <Route path='/news' element={< NewsPage />} />
-      <Route path='/programs' element={< ProgramsPage />} />
-      <Route path='/activities' element={< ActivitiesPage />} />
+      <Route path='/' element={< Pocetna />} />
+      <Route path='/kontakt' element={< Kontakt />} />
+      <Route path='/galerija' element={< Galerija />} />
+      <Route path='/novosti' element={< Novosti />} />
+      <Route path='/programi' element={< Programi />} />
+
+      <Route path='/za-ucilisteto' element={< ZaNas />} />
+      <Route path='/aktivnosti' element={< Aktivnosti />} />
     </Routes>
   </Router>
   );

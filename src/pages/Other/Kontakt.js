@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 import { useTranslation } from 'react-i18next';
 
-const ContactPage = () => {
+const Kontakt = () => {
 
   const { t } = useTranslation();
 
@@ -117,4 +117,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default Kontakt;

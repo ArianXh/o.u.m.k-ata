@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 
-const GalleryPage = () => {
+const Galerija = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const categories = ["All", "Events", "Achievements", "Campus Life", "Workshops"];
@@ -84,4 +84,4 @@ const GalleryPage = () => {
   );
 };
 
-export default GalleryPage;
+export default Galerija;
