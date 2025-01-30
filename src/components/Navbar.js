@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-blue-600 text-white shadow-lg sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div className="container mx-auto px-4 py-10 flex justify-between items-center">
         <div className="text-2xl font-bold tracking-wide">
           <Link to="/" className="hover:text-blue-300">{t('О.У Мустафа Кемал Ататурк')}</Link>
         </div>
@@ -92,23 +92,6 @@ const Navbar = () => {
             </ul>
           </li>
 
-          {/* "Програми" with Submenu */}
-          <li className="relative group">
-            <Link to="/programs" className="hover:text-blue-300">{t('Програми')} ▼</Link>
-            <ul className="absolute left-0 bg-white text-black shadow-lg rounded-lg py-2 w-48 
-              hidden group-hover:flex flex-col group-hover:pointer-events-auto pointer-events-none transition duration-300">
-              <li>
-                <Link to="/programs/kindergarten" className="block px-4 py-2 hover:bg-gray-200">{t('Градинка')}</Link>
-              </li>
-              <li>
-                <Link to="/programs/primary" className="block px-4 py-2 hover:bg-gray-200">{t('Основно')}</Link>
-              </li>
-              <li>
-                <Link to="/programs/secondary" className="block px-4 py-2 hover:bg-gray-200">{t('Средно')}</Link>
-              </li>
-            </ul>
-          </li>
-
           <li className="relative group">
             <Link to="/activities" className="hover:text-blue-300">{t('Активности')} ▼</Link>
               <ul className="absolute left-0 bg-white text-black shadow-lg rounded-lg py-2 w-48 
@@ -124,6 +107,11 @@ const Navbar = () => {
                 </li>
               </ul>
           </li>
+
+          <li>
+            <Link to="/programs" className="hover:text-blue-300">{t('Програми')}</Link>
+          </li>
+
           <li>
             <Link to="/gallery" className="hover:text-blue-300">{t('Галерија')}</Link>
           </li>

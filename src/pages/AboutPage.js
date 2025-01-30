@@ -104,7 +104,7 @@ const TeamSection = ({ teamData }) => (
         className="bg-gray-300 rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300"
       >
         {/* Uncomment if images are available */}
-        {/* <img src={member.image} alt={member.name} className="w-32 h-32 rounded-full mx-auto object-cover" /> */}
+        <img src={member.image} alt={member.name} className="w-200 h-200 rounded-full mx-auto object-cover" />
         <h3 className="text-2xl font-semibold text-gray-900 mt-4">{member.name}</h3>
         <p className="text-blue-700 font-medium">{member.position}</p>
         
