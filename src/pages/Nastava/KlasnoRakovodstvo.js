@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const KlasnoRakovodstvo = () => {
@@ -72,6 +73,19 @@ const KlasnoRakovodstvo = () => {
               <p className="text-xl text-gray-900 mt-2">{t(item.teacher)}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Contact Us Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-700 to-indigo-800 text-white text-center px-6">
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-extrabold">{t("Ако имате било какви прашања, слободно контактирајте нè")}</h2>
+          <p className="mt-4 text-lg opacity-90">{t("Нашиот тим е секогаш тука за вас!")}</p>
+          <Link to="/kontakt">
+            <button className="mt-6 bg-white text-blue-700 px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-gray-300 transition-all">
+              {t("Контактирајте нè")}
+            </button>
+          </Link>
         </div>
       </section>
       <Footer />
