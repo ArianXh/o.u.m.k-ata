@@ -46,12 +46,25 @@ const KlasnoRakovodstvo = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-700 to-indigo-800 text-white py-24 text-center shadow-md">
         <div className="container mx-auto px-6">
-          <h1 className="text-6xl font-extrabold tracking-wide">{t("Распоред на часови")}</h1>
+          <h1 className="text-6xl font-extrabold tracking-wide">{t("Класно раководство и работа во смени")}</h1>
+        </div>
+      </section>
+
+      {/* Работа во смени Section */}
+      <section className="py-20 bg-gradient-to-r from-gray-50 to-gray-400">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold text-gray-800">{t("Работа во смени")}</h2>
+          <div className="mt-6 max-w-3xl mx-auto text-lg text-gray-800 font-semibold space-y-4 bg-white shadow-lg p-6 rounded-lg border border-gray-300">
+            <p>{t("- Во централното основно училиште се работи во една смена, а часовите започнуват во 8:00ч, а завршуваат во 13:25 ч.")}</p>
+            <p>{t("- Во подрачното училиште во С.Броштица наставата се одвива во 2 смени, а часовите започнуваат во 8 ч и завршуваат во 17 ч.")}</p>
+            <p>{t("- Во с. Горенци се работи во една смена, а часовите започнуват во 8:00ч ,а завршуваат во 12 ч.")}</p>
+          </div>
         </div>
       </section>
       
       {/* Class List Section */}
-      <section className="container mx-auto px-6 py-12">
+      <section className="container mx-auto px-6 py-12 text-center">
+        <h2 className="text-4xl font-bold text-gray-800">{t("Класно раководство")}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {classes.map((item, index) => (
             <div key={index} className="bg-white shadow-lg rounded-lg p-6">
