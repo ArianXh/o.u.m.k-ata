@@ -1,117 +1,80 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-
-import { 
-  getTimelineEvents, 
-  getAdministrativeStaff, 
-  getSchoolBoard,
-  getTechnicalStaff,
-  getEducationalStaff
-} from '../../helpers/StaffData';
+import { getTimelineEvents } from '../../helpers/StaffData';
 
 const ZaUcilisteto = () => {
-  const [activeTab, setActiveTab] = useState("administrative");
   const { t } = useTranslation();
-
   const timelineEvents = getTimelineEvents(t);
-  const administrativeStaff = getAdministrativeStaff(t);
-  const schoolBoard = getSchoolBoard(t);
-  const technicalStaff = getTechnicalStaff(t);
-  const educationalStaff = getEducationalStaff(t);
 
   return (
-    <div className="about-page bg-gray-50">
+    <div className="about-page bg-gray-50 font-sans">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="bg-blue-800 text-white py-20 text-center">
-        <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold">{t("За О.У Мустафа Кемал Ататурк")}</h1>
-          <p className="mt-4 text-lg">{t("Знаеме и можеме да работиме за доброто на сите")}</p>
+      <section className="bg-gradient-to-r from-blue-700 to-indigo-800 text-white py-24 text-center shadow-md">
+        <div className="container mx-auto px-6">
+          <h1 className="text-6xl font-extrabold tracking-wide">{t("За О.У Мустафа Кемал Ататурк")}</h1>
+          <p className="mt-4 text-lg opacity-90">{t("Знаеме и можеме да работиме за доброто на сите")}</p>
         </div>
       </section>
 
       {/* School Overview */}
-      <section className="py-12 bg-white text-center">
+      <section className="py-16 bg-gray-100 text-center px-6">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-gray-800">{t("Мисија")}</h2>
-          <p className="mt-6 text-gray-600">
-            {t(
-              "ООУ„Мустафа Кемал Ататурк“ е ваш дом, катче на соживот, меѓуетничка толеранција и заемна почит, во овој простор, каде што се спојуваат воспитанието, образованието и хуманите вредности, со нашиот висококвалитетен кадар сигурно чекориме кон иднината."
-            )}
-          </p>
+          <div className="flex flex-col md:flex-row gap-8">
+            {/* Mission Section */}
+            <div className="md:w-1/2 p-8 bg-white shadow-lg rounded-xl">
+              <h2 className="text-4xl font-bold text-blue-700 border-b-2 border-blue-500 pb-2">{t("Мисија")}</h2>
+              <p className="mt-6 text-gray-700 text-xl leading-relaxed">
+                {t("ООУ„Мустафа Кемал Ататурк“ е ваш дом, катче на соживот, меѓуетничка толеранција и заемна почит, во овој простор, каде што се спојуваат воспитанието, образованието и хуманите вредности, со нашиот висококвалитетен кадар сигурно чекориме кон иднината.")}
+              </p>
+            </div>
 
-          <h2 className="mt-8 text-4xl font-bold text-gray-800">{t("Визија")}</h2>
-          <p className="mt-6 text-gray-600">
-            {t(
-              "Нашата визија е да бидеме водечко училиште кое обезбедува иновативно, инклузивно и инспиративно образование. Преку негување на љубопитноста, креативноста и критичкото размислување, ги подготвуваме учениците да станат самоуверени, одговорни и успешни граѓани на глобалната заедница."
-            )}
-          </p>
+            {/* Vision Section */}
+            <div className="md:w-1/2 p-8 bg-white shadow-lg rounded-xl">
+              <h2 className="text-4xl font-bold text-blue-700 border-b-2 border-blue-500 pb-2">{t("Визија")}</h2>
+              <p className="mt-6 text-gray-700 text-xl leading-relaxed">
+                {t("Нашата визија е да бидеме водечко училиште кое обезбедува иновативно, инклузивно и инспиративно образование. Преку негување на љубопитноста, креативноста и критичкото размислување, ги подготвуваме учениците да станат самоуверени, одговорни и успешни граѓани на глобалната заедница.")}
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Tabs Section */}
-      <section id="teamSection" className="py-12 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-gray-800 text-center">{t("Кадар")}</h2>
-
-          {/* Tabs Navigation */}
-          <div className="flex justify-center space-x-4 mt-8">
-            {[
-              { key: "administrative", label: t("Административен Кадар") },
-              { key: "educational", label: t("Наставен Кадар") },
-              { key: "schoolBoard", label: t("Училишен Одбор") },
-              { key: "technical", label: t("Технички Кадар") },
-            ].map((tab) => (
-              <button
-                key={tab.key}
-                onClick={() => setActiveTab(tab.key)}
-                className={`py-2 px-4 rounded-lg font-semibold transition-all ${
-                  activeTab === tab.key
-                    ? "bg-blue-600 text-white shadow-lg"
-                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                }`}
-              >
-                {tab.label}
-              </button>
+      {/* Timeline Section */}
+      <section className="py-16 bg-white px-6">
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-bold text-center text-blue-700 border-b-2 border-blue-500 pb-2">{t("Историјат")}</h2>
+          <div className="mt-10 space-y-8">
+            {timelineEvents.map((event, index) => (
+              <div key={index} className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-6 bg-gray-50 p-6 rounded-lg shadow-md">
+                <div className="text-blue-600 font-bold text-3xl md:w-1/5 text-center">{event.year}</div>
+                <p className="text-gray-800 text-xl md:w-4/5 leading-relaxed">{event.event}</p>
+              </div>
             ))}
           </div>
-
-          {/* Tabs Content */}
-          <div className="mt-10">
-            {activeTab === "administrative" && <TeamSection teamData={administrativeStaff} />}
-            {activeTab === "educational" && <TeamSection teamData={educationalStaff} />}
-            {activeTab === "schoolBoard" && <TeamSection teamData={schoolBoard} />}
-            {activeTab === "technical" && <TeamSection teamData={technicalStaff} />}
-          </div>
         </div>
-    </section>
+      </section>
 
+      {/* Contact Us Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-700 to-indigo-800 text-white text-center px-6">
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-extrabold">{t("Ако имате било какви прашања, слободно контактирајте нè")}</h2>
+          <p className="mt-4 text-lg opacity-90">{t("Нашиот тим е секогаш тука за вас!")}</p>
+          <Link to="/kontakt">
+            <button className="mt-6 bg-white text-blue-700 px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-gray-300 transition-all">
+              {t("Контактирајте нè")}
+            </button>
+          </Link>
+        </div>
+      </section>
+      
       <Footer />
     </div>
   );
 };
-
-
-// Reusable Component for Team Sections
-const TeamSection = ({ teamData }) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    {teamData.map((member, index) => (
-      <div
-        key={index}
-        className="bg-gray-300 rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300"
-      >
-        {/* Uncomment if images are available */}
-        <img src={member.image} alt={member.name} className="w-200 h-200 rounded-full mx-auto object-cover" />
-        <h3 className="text-2xl font-semibold text-gray-900 mt-4">{member.name}</h3>
-        <p className="text-blue-700 font-medium">{member.position}</p>
-        
-      </div>
-    ))}
-  </div>
-);
-
 
 export default ZaUcilisteto;

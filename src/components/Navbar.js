@@ -28,9 +28,6 @@ const Navbar = () => {
                 <Link to="/za-ucilisteto" className="block px-4 py-2 hover:bg-gray-200">{t('За училиштето')}</Link>
               </li>
               <li>
-                <Link to="/za-ucilisteto/patron" className="block px-4 py-2 hover:bg-gray-200">{t('За патронот')}</Link>
-              </li>
-              <li>
                 <Link to="/za-ucilisteto/vraboteni" className="block px-4 py-2 hover:bg-gray-200">{t('Вработени')}</Link>
               </li>
               <li>

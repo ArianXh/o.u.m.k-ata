@@ -63,62 +63,6 @@ export const getAdministrativeStaff = (t) => [
       },
 ]
 
-export const getSchoolBoard = (t) => [
-    {
-        name: t('Џошкун Зеќир'),
-        position: t('Од редот на наставниците - Член'),
-        image: '/staff-images/placeholder.jpg',
-        bio: 'With 20 years of experience in education, Jane leads the school with a passion for excellence.',
-      },
-      {
-        name: t('Асан Мемедовски'),
-        position: t('Од редот на наставниците - Член'),
-        image: '/staff-images/placeholder.jpg',
-        bio: 'John oversees academic programs and ensures every student reaches their full potential.',
-      },
-      {
-        name: t('Арта Папранику'),
-        position: t('Од редот на наставниците - Член'),
-        image: '/staff-images/placeholder.jpg',
-        bio: 'John oversees academic programs and ensures every student reaches their full potential.',
-      },
-      {
-        name: t('Белур Џаферовски'),
-        position: t('Од редот на родителите - Претседател'),
-        image: '/staff-images/placeholder.jpg',
-        bio: 'Emily brings innovation and hands-on learning to the science curriculum.',
-      },
-      {
-        name: t('Зенун Шаќир'),
-        position: t('Од редот на родителите - Заменик Претседател'),
-        image: '/staff-images/placeholder.jpg',
-        bio: 'Emily brings innovation and hands-on learning to the science curriculum.',
-      },
-      {
-        name: t('Арсим Исламовски'),
-        position: t('Од редот на родителите - Член'),
-        image: '/staff-images/placeholder.jpg',
-        bio: 'Emily brings innovation and hands-on learning to the science curriculum.',
-      },
-      {
-        name: t('Суад Скендер'),
-        position: t('Од Локална Самоуправа - Центар Жупа'),
-        image: '/staff-images/placeholder.jpg',
-        bio: 'Emily brings innovation and hands-on learning to the science curriculum.',
-      },
-      {
-        name: t('Беглија Вејселовска'),
-        position: t('Од редот на учениците'),
-        image: '/staff-images/placeholder.jpg',
-        bio: 'Emily brings innovation and hands-on learning to the science curriculum.',
-      },
-      {
-        name: t('Бастри Есра'),
-        position: t('Од редот на учениците'),
-        image: '/staff-images/placeholder.jpg',
-        bio: 'Emily brings innovation and hands-on learning to the science curriculum.',
-      },
-]
 
 export const getTechnicalStaff = (t) => [
     {

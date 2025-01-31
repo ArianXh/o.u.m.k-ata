@@ -10,7 +10,6 @@ import Novosti from './pages/Other/Novosti';
 // ZA NAS
 import ZaUcilisteto from './pages/ZaNas/ZaUcilisteto';
 import Vraboteni from './pages/ZaNas/Vraboteni';
-import ZaPatronot from './pages/ZaNas/ZaPatronot';
 import UcilisniOrgani from './pages/ZaNas/UcilisniOrgani';
 
 
@@ -63,7 +62,6 @@ function App() {
 
       {/* ---------ZA NAS--------- */}
       <Route path='/za-ucilisteto' element={< ZaUcilisteto />} />
-      <Route path='/za-ucilisteto/patron' element={< ZaPatronot />} />
       <Route path='/za-ucilisteto/vraboteni' element={< Vraboteni />} />
       <Route path='/za-ucilisteto/organi' element={< UcilisniOrgani />} />
 
