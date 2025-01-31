@@ -14,11 +14,10 @@ import UcilisniOrgani from './pages/ZaNas/UcilisniOrgani';
 
 
 // NASTAVA
-import RasporedNaCasovi from './pages/Nastava/RasporedNaCasovi';
+import KlasnoRakovodstvo from './pages/Nastava/KlasnoRakovodstvo';
 import DopolnitelnaNastava from './pages/Nastava/DopolnitelnaNastava';
 import DodatnaNastava from './pages/Nastava/DodatnaNastava';
 import PriemniDenovi from './pages/Nastava/PriemniDenovi';
-import RasporedNaZvonenje from './pages/Nastava/RasporedNaZvonenje';
 import Ekskurzii from './pages/Nastava/Ekskurzii';
 import IzborniPredmeti from './pages/Nastava/IzborniPredmeti';
 
@@ -48,6 +47,7 @@ import VonucilisniAktivnosti from './pages/Aktivnosti/VonucilisniAktivnosti';
 
 
 
+
 function App() {
   return (
     <Router>
@@ -67,11 +67,10 @@ function App() {
 
 
       {/* ---------NASTAVA--------- */}
-      <Route path='/nastava/raspored-na-casovi' element={< RasporedNaCasovi />} />
+      <Route path='/nastava/klasno-rakovodstvo' element={< KlasnoRakovodstvo />} />
       <Route path='/nastava/dopolnitelna-nastava' element={< DopolnitelnaNastava />} />
       <Route path='/nastava/dodatna-nastava' element={< DodatnaNastava />} />
       <Route path='/nastava/priemni-denovi' element={< PriemniDenovi />} />
-      <Route path='/nastava/raspored-na-zvonenje' element={< RasporedNaZvonenje />} />
       <Route path='/nastava/ekskurzii' element={< Ekskurzii />} />
       <Route path='/nastava/izborni-predmeti' element={< IzborniPredmeti />} />
       
