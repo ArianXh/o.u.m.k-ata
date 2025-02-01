@@ -10,7 +10,7 @@ const Ekskurzii = () => {
 
   const excursions = [
     { title: t("Есенска еднодневна екскурзија"), file: "autumn-excursion.pdf" },
-    { title: t("Зимска еднодневна екскурзија"), file: "winter-excursion.pdf" },
+    { title: t("Пролетна еднодневна екскурзија надвор од градот"), file: "winter-excursion.pdf" },
     { title: t("Пролетна еднодневна екскурзија"), file: "spring-excursion.pdf" },
   ];
 
