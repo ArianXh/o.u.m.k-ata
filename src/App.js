@@ -15,9 +15,7 @@ import UcilisniOrgani from './pages/ZaNas/UcilisniOrgani';
 
 // NASTAVA
 import KlasnoRakovodstvo from './pages/Nastava/KlasnoRakovodstvo';
-import DopolnitelnaNastava from './pages/Nastava/DopolnitelnaNastava';
 import DodatnaNastava from './pages/Nastava/DodatnaNastava';
-import PriemniDenovi from './pages/Nastava/PriemniDenovi';
 import Ekskurzii from './pages/Nastava/Ekskurzii';
 import IzborniPredmeti from './pages/Nastava/IzborniPredmeti';
 
@@ -68,9 +66,7 @@ function App() {
 
       {/* ---------NASTAVA--------- */}
       <Route path='/nastava/klasno-rakovodstvo' element={< KlasnoRakovodstvo />} />
-      <Route path='/nastava/dopolnitelna-nastava' element={< DopolnitelnaNastava />} />
       <Route path='/nastava/dodatna-nastava' element={< DodatnaNastava />} />
-      <Route path='/nastava/priemni-denovi' element={< PriemniDenovi />} />
       <Route path='/nastava/ekskurzii' element={< Ekskurzii />} />
       <Route path='/nastava/izborni-predmeti' element={< IzborniPredmeti />} />
       

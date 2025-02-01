@@ -45,13 +45,7 @@ const Navbar = () => {
                 <Link to="/nastava/klasno-rakovodstvo" className="block px-4 py-2 hover:bg-gray-300">{t('Класно раководство')}</Link>
               </li>
               <li>
-                <Link to="/nastava/dopolnitelna-nastava" className="block px-4 py-2 hover:bg-gray-300">{t('Дополнителна настава')}</Link>
-              </li>
-              <li>
                 <Link to="/nastava/dodatna-nastava" className="block px-4 py-2 hover:bg-gray-300">{t('Додатна настава')}</Link>
-              </li>
-              <li>
-                <Link to="/nastava/priemni-denovi" className="block px-4 py-2 hover:bg-gray-300">{t('Приемни денови')}</Link>
               </li>
               <li>
                 <Link to="/nastava/ekskurzii" className="block px-4 py-2 hover:bg-gray-300">{t('Екскурзии')}</Link>
