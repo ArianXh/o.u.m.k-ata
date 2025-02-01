@@ -15,19 +15,19 @@ const Footer = () => {
             <h3 className="text-2xl font-bold mb-4">{t("За Нас")}</h3>
             <ul className="space-y-2 text-lg">
               <li>
-                <a href="#" className="hover:underline">{t("Историјат")}</a>
+                <a href="/" className="hover:underline">{t("Историјат")}</a>
               </li>
               <li>
-                <a href="#" className="hover:underline">{t("Планови и програми")}</a>
+                <a href="/" className="hover:underline">{t("Планови и програми")}</a>
               </li>
               <li>
-                <a href="#" className="hover:underline">{t("Активности")}</a>
+                <a href="/" className="hover:underline">{t("Активности")}</a>
               </li>
               <li>
-                <a href="#" className="hover:underline">{t("Кабинети и училници")}</a>
+                <a href="/" className="hover:underline">{t("Кабинети и училници")}</a>
               </li>
               <li>
-                <a href="#" className="hover:underline">{t("Завршни сметки")}</a>
+                <a href="/" className="hover:underline">{t("Завршни сметки")}</a>
               </li>
             </ul>
           </div>
@@ -39,17 +39,17 @@ const Footer = () => {
             <h3 className="text-2xl font-bold mb-4">{t("Настава")}</h3>
             <ul className="space-y-2 text-lg">
               <li>
-                <a href="/about#teamSection" className="hover:underline" rel="noopener noreferrer">{t("Кадар")}</a>
+                <a href="/" className="hover:underline" rel="noopener noreferrer">{t("Кадар")}</a>
               </li>
               <li>
-                <a href="" className="hover:underline" rel="noopener noreferrer">{t("Распоред на часови")}</a>
+                <a href="/" className="hover:underline" rel="noopener noreferrer">{t("Распоред на часови")}</a>
               </li>
               
               <li>
-                <a href="" className="hover:underline" rel="noopener noreferrer">{t("Видови настава")}</a>
+                <a href="/" className="hover:underline" rel="noopener noreferrer">{t("Видови настава")}</a>
               </li>
               <li>
-                <a href="" className="hover:underline" rel="noopener noreferrer">{t("Мултикултурализам")}</a>
+                <a href="/" className="hover:underline" rel="noopener noreferrer">{t("Мултикултурализам")}</a>
               </li>
             </ul>
           </div>
@@ -59,16 +59,16 @@ const Footer = () => {
             <h3 className="text-2xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-lg">
               <li>
-                <a href="#privacy-policy" className="hover:underline">Privacy Policy</a>
+                <a href="/" className="hover:underline">Privacy Policy</a>
               </li>
               <li>
-                <a href="#terms-of-service" className="hover:underline">Terms of Service</a>
+                <a href="/" className="hover:underline">Terms of Service</a>
               </li>
               <li>
-                <a href="#faq" className="hover:underline">FAQ</a>
+                <a href="/" className="hover:underline">FAQ</a>
               </li>
               <li>
-                <a href="#help" className="hover:underline">Help</a>
+                <a href="/" className="hover:underline">Help</a>
               </li>
             </ul>
           </div>
