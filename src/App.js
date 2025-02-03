@@ -32,16 +32,6 @@ import UcenickaZaednica from './pages/Aktivnosti/UcenickaZaednica';
 import VonnastavniAktivnosti from './pages/Aktivnosti/VonnastavniAktivnosti';
 
 
-
-
-
-
-
-
-
-
-
-
 function App() {
   return (
     <Router>
