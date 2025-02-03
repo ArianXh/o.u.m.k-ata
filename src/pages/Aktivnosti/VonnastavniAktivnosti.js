@@ -2,9 +2,8 @@ import React from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import KontaktirajteNe from '../../components/KontaktirajteNe';
-import { Link } from 'react-router-dom';
+
 import { useTranslation } from 'react-i18next';
-import { FaDownload } from 'react-icons/fa';
 
 const VonnastavniAktivnosti = () => {
   const { t } = useTranslation();
