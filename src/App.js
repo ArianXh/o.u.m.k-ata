@@ -5,7 +5,6 @@ import Pocetna from "./pages/Other/Pocetna";
 import Kontakt  from './pages/Other/Kontakt';
 import Galerija from './pages/Other/Galerija';
 import Programi from './pages/Other/Programi';
-import Novosti from './pages/Other/Novosti';
 
 // ZA NAS
 import ZaUcilisteto from './pages/ZaNas/ZaUcilisteto';
@@ -52,7 +51,6 @@ function App() {
       <Route path='/' element={< Pocetna />} />
       <Route path='/kontakt' element={< Kontakt />} />
       <Route path='/galerija' element={< Galerija />} />
-      <Route path='/novosti' element={< Novosti />} />
       <Route path='/programi' element={< Programi />} />
 
       {/* ---------ZA NAS--------- */}

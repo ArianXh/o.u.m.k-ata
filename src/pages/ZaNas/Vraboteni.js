@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import KontaktirajteNe from '../../components/KontaktirajteNe';
 import { useTranslation } from 'react-i18next';
 
 import {  
@@ -16,62 +17,58 @@ const Vraboteni = () => {
   const technicalStaff = getTechnicalStaff(t);
   const educationalStaff = getEducationalStaff(t);
 
-
   return (
-    <div className="about-page bg-gray-50">
+    <div className="about-page bg-neutral-light">
       <Navbar />
 
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-36 text-center shadow-2xl">
-          
-          {/* Background Overlay for Depth */}
-          <div className="absolute inset-0 bg-blue-400 opacity-70"></div>
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-primary-light to-primary text-white py-32 text-center">
+        {/* Background Overlay for Depth */}
+        <div className="absolute inset-0 bg-black opacity-40"></div>
+        <div className="container mx-auto px-6 relative">
+          <h1 className="text-6xl md:text-7xl font-bold text-white tracking-tight leading-tight drop-shadow-lg">
+            {t("Вработени")}
+          </h1>
+        </div>
+      </section>
 
-          <div className="container mx-auto px-6 relative">
-            <h1 className="text-5xl md:text-7xl font-extrabold tracking-wide text-white drop-shadow-lg">
-              {t("Вработени")}
-            </h1>
-            
+      {/* Tabs Section */}
+      <section id="teamSection" className="py-12 bg-neutral-light">
+        <div className="container mx-auto px-4">
+          {/* Tabs Navigation */}
+          <div className="flex justify-center space-x-4 mt-8">
+            {[
+              { key: "administrative", label: t("Административен Кадар") },
+              { key: "educational", label: t("Наставен Кадар") },
+              { key: "technical", label: t("Технички Кадар") },
+            ].map((tab) => (
+              <button
+                key={tab.key}
+                onClick={() => setActiveTab(tab.key)}
+                className={`py-2 px-6 rounded-lg font-semibold transition-all ${
+                  activeTab === tab.key
+                    ? "bg-primary-dark text-white shadow-lg"
+                    : "bg-primary-light text-neutral-light hover:bg-neutral-dark"
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
           </div>
-        </section>
 
-
-        {/* Tabs Section */}
-        <section id="teamSection" className="py-12 bg-gray-100">
-          <div className="container mx-auto px-4">
-
-            {/* Tabs Navigation */}
-            <div className="flex justify-center space-x-4 mt-8">
-              {[
-                { key: "administrative", label: t("Административен Кадар") },
-                { key: "educational", label: t("Наставен Кадар") },
-                { key: "technical", label: t("Технички Кадар") },
-              ].map((tab) => (
-                <button
-                  key={tab.key}
-                  onClick={() => setActiveTab(tab.key)}
-                  className={`py-2 px-4 rounded-lg font-semibold transition-all ${
-                    activeTab === tab.key
-                      ? "bg-blue-600 text-white shadow-lg"
-                      : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                  }`}
-                >
-                  {tab.label}
-                </button>
-              ))}
-            </div>
-
-            {/* Tabs Content */}
-            <div className="mt-10">
-              {activeTab === "administrative" && <TeamSection teamData={administrativeStaff} />}
-              {activeTab === "educational" && <TeamSection teamData={educationalStaff} />}
-              {activeTab === "technical" && <TeamSection teamData={technicalStaff} />}
-            </div>
+          {/* Tabs Content */}
+          <div className="mt-10">
+            {activeTab === "administrative" && <TeamSection teamData={administrativeStaff} />}
+            {activeTab === "educational" && <TeamSection teamData={educationalStaff} />}
+            {activeTab === "technical" && <TeamSection teamData={technicalStaff} />}
           </div>
-        </section>
-        <Footer />
-      </div>
-  )
+        </div>
+      </section>
+
+      <KontaktirajteNe />
+      <Footer />
+    </div>
+  );
 }
 
 // Reusable Component for Team Sections
@@ -80,16 +77,15 @@ const TeamSection = ({ teamData }) => (
     {teamData.map((member, index) => (
       <div
         key={index}
-        className="bg-gray-300 rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300"
+        className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300"
       >
         {/* Uncomment if images are available */}
-        <img src={member.image} alt={member.name} className="w-200 h-200 rounded-full mx-auto object-cover" />
-        <h3 className="text-2xl font-semibold text-gray-900 mt-4">{member.name}</h3>
-        <p className="text-blue-700 font-medium">{member.position}</p>
-        
+        <img src={member.image} alt={member.name} className="w-30 h-30 rounded-full mx-auto object-cover" />
+        <h3 className="text-2xl font-semibold text-secondary-dark mt-4">{member.name}</h3>
+        <p className="text-primary-dark font-medium">{member.position}</p>
       </div>
     ))}
   </div>
 );
 
-export default Vraboteni
+export default Vraboteni;

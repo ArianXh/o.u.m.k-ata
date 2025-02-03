@@ -14,16 +14,37 @@ const HeroSlider = () => {
   return (
     <div className="font-sans">
       {/* Hero Section */}
-      <section className="relative">
-        <div className="w-full h-[500px] bg-cover bg-center" style={{ backgroundImage: 'url(/path-to-your-image.jpg)' }}>
-          <div className="bg-black bg-opacity-50 h-full flex flex-col justify-center items-center text-white px-4">
-            <h1 className="text-4xl md:text-6xl font-bold">{t("О.У М.К. Ататурк")}</h1>
-            <p className="mt-4 text-lg md:text-2xl">{t("Знаеме и можеме да работиме за доброто на сите")}</p>
-            <Link to="/za-ucilisteto">
-              <button className="mt-6 px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-full text-lg font-semibold">
-                {t("Прочитај повеќе")}
-              </button>
-            </Link>
+      <section className="relative bg-gradient-to-b from-white via-gray-100 to-white py-40 text-center">
+        {/* Background Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-red-500 via-red-400 to-red-500 opacity-60"></div>
+
+        {/* Content Container */}
+        <div className="container mx-auto px-6 relative">
+          
+          {/* Headline */}
+          <h1 className="text-5xl font-extrabold text-gray-900 leading-tight tracking-tight drop-shadow-md">
+            {t("О.У Мустафа Кемал Ататурк")}
+          </h1>
+
+          {/* Subheadline */}
+          <p className="mt-4 text-lg text-gray-700">
+          Знаеме и можеме да работиме за доброто на сите 
+          </p>
+
+          {/* Call-to-Actions */}
+          <div className="mt-8 flex justify-center space-x-4">
+            <a
+              href="/za-ucilisteto"
+              className="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition-all"
+            >
+              {t("Повеќе")}
+            </a>
+            <a
+              href="/kontakt"
+              className="border-2 border-red-500 text-red-500 hover:text-white hover:bg-red-500 font-semibold py-3 px-8 rounded-lg shadow-md transition-all"
+            >
+              {t("Контактирајте нè")}
+            </a>
           </div>
         </div>
       </section>

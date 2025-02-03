@@ -11,17 +11,16 @@ const Kontakt = () => {
     <div className="contact-page bg-gray-50">
       <Navbar />
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-36 text-center shadow-2xl">
-        
-        {/* Background Overlay for Depth */}
-        <div className="absolute inset-0 bg-blue-400 opacity-70"></div>
+      <section className="relative bg-gradient-to-r from-red-200 to-red-300 text-white py-32 text-center">
 
-        <div className="container mx-auto px-6 relative">
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-wide text-white drop-shadow-lg">
-            {t("Контакт")}
-          </h1>
-          
-        </div>
+      {/* Background Overlay for Depth */}
+      <div className="absolute inset-0 bg-black opacity-40"></div>
+
+      <div className="container mx-auto px-6 relative">
+        <h1 className="text-6xl md:text-7xl font-bold text-white tracking-tight leading-tight drop-shadow-lg">
+        {t("Контакт")}
+        </h1>
+      </div>
       </section>
 
       {/* Contact Form Section */}

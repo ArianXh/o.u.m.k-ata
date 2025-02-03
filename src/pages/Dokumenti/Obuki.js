@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import KontaktirajteNe from '../../components/KontaktirajteNe';
 import { useTranslation } from 'react-i18next';
 
 const Obuki = () => {
@@ -57,6 +58,7 @@ const Obuki = () => {
                 </div>
               </div>
             </section>
+            <KontaktirajteNe />
             <Footer />
         </div>
       );

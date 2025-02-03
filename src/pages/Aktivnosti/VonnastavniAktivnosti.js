@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import KontaktirajteNe from '../../components/KontaktirajteNe';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { FaDownload } from 'react-icons/fa';
@@ -12,19 +13,23 @@ const VonnastavniAktivnosti = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
       <Navbar />
+
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-36 text-center shadow-2xl">
-        
+      <section className="relative bg-gradient-to-r from-primary-light to-primary text-white py-32 text-center">
+
         {/* Background Overlay for Depth */}
-        <div className="absolute inset-0 bg-blue-400 opacity-70"></div>
+        <div className="absolute inset-0 bg-black opacity-30"></div>
 
         <div className="container mx-auto px-6 relative">
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-wide text-white drop-shadow-lg">
-            {t("Воннаставни Активности")}
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-tight drop-shadow-lg">
+            {t("Воннаставни активности")}
           </h1>
-          
         </div>
       </section>
+
+
+
+
 
       <div className="container mx-auto py-12 px-6">
         <section className="mb-12">
@@ -88,18 +93,7 @@ const VonnastavniAktivnosti = () => {
       </div>
       
 
-      {/* Contact Us Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-700 to-indigo-800 text-white text-center px-6">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-extrabold">{t("Ако имате било какви прашања, слободно контактирајте нè")}</h2>
-          <p className="mt-4 text-lg opacity-90">{t("Нашиот тим е секогаш тука за вас!")}</p>
-          <Link to="/kontakt">
-            <button className="mt-6 bg-white text-blue-700 px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-gray-300 transition-all">
-              {t("Контактирајте нè")}
-            </button>
-          </Link>
-        </div>
-      </section>
+      <KontaktirajteNe />
       <Footer />
     </div>
   );
