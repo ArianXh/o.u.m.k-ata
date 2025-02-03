@@ -29,10 +29,9 @@ import Drugi from './pages/Dokumenti/Drugi';
 import Obuki from './pages/Dokumenti/Obuki';
 
 // AKTIVNOSTI
-import Aktivnosti from './pages/Aktivnosti/Aktivnosti';
 import UcenickaZaednica from './pages/Aktivnosti/UcenickaZaednica';
 import VonnastavniAktivnosti from './pages/Aktivnosti/VonnastavniAktivnosti';
-import VonucilisniAktivnosti from './pages/Aktivnosti/VonucilisniAktivnosti';
+
 
 
 
@@ -80,10 +79,8 @@ function App() {
 
 
       {/* ---------AKTIVNOSTI--------- */}
-      <Route path='/aktivnosti' element={< Aktivnosti />} />
       <Route path='/aktivnosti/vonnastavni-aktivnosti' element={< VonnastavniAktivnosti />} />
       <Route path='/aktivnosti/ucenicka-zaednica' element={< UcenickaZaednica />} />
-      <Route path='/aktivnosti/vonucilisni-aktivnosti' element={< VonucilisniAktivnosti />} />
         
     </Routes>
   </Router>

@@ -103,9 +103,6 @@ const Navbar = () => {
                 <li>
                   <Link to="/aktivnosti/ucenicka-zaednica" className="block px-4 py-2 hover:bg-gray-300">{t('Ученичка заедница')}</Link>
                 </li>
-                <li>
-                  <Link to="/aktivnosti/vonucilisni-aktivnosti" className="block px-4 py-2 hover:bg-gray-300">{t('Вонучилишни активности')}</Link>
-                </li>
               </ul>
           </li>
 
@@ -197,7 +194,6 @@ const Navbar = () => {
                 <div className="pl-4 space-y-2">
                   <Link to="/aktivnosti/vonnastavni-aktivnosti" className="block hover:text-blue-300">{t('Воннаставни активности')}</Link>
                   <Link to="/aktivnosti/ucenicka-zaednica" className="block hover:text-blue-300">{t('Ученичка заедница')}</Link>
-                  <Link to="/aktivnosti/vonucilisni-aktivnosti" className="block hover:text-blue-300">{t('Вонучилишни активности')}</Link>
                 </div>
               )}
           </div>
