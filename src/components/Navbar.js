@@ -66,37 +66,43 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg p-4 space-y-2">
-          {["Почетна", "Програми", "Галерија", "Контакт"].map((item, index) => (
-            <Link key={index} to={`/${item.toLowerCase()}`} className="block py-2 text-gray-700 hover:bg-gray-100">
-              {t(item)}
-            </Link>
-          ))}
+{isMobileMenuOpen && (
+  <div className="md:hidden bg-white shadow-lg p-4 space-y-2">
+    {[
+      { label: "Почетна", url: "/" },
+      { label: "Програми", url: "/programi" },
+      { label: "Галерија", url: "/galerija" },
+      { label: "Контакт", url: "/kontakt" },
+    ].map((item, index) => (
+      <Link key={index} to={item.url} className="block py-2 text-gray-700 hover:bg-gray-100">
+        {t(item.label)}
+      </Link>
+    ))}
 
-          {[
-            { label: t("За Нас"), links: ["/za-ucilisteto", "/za-ucilisteto/vraboteni", "/za-ucilisteto/organi"] },
-            { label: t("Настава"), links: ["/nastava/klasno-rakovodstvo", "/nastava/dodatna-nastava", "/nastava/ekskurzii", "/nastava/izborni-predmeti"] },
-            { label: t("Документи"), links: ["/dokumenti/interni-akti", "/dokumenti/godisna-programa", "/dokumenti/razvoen-plan", "/dokumenti/samoevaluacija", "/dokumenti/finansii", "/dokumenti/drugi", "/dokumenti/obuki"] },
-            { label: t("Активности"), links: ["/aktivnosti/vonnastavni-aktivnosti", "/aktivnosti/ucenicka-zaednica"] },
-          ].map((menu, index) => (
-            <div key={index}>
-              <button onClick={() => toggleSubmenu(index)} className="w-full text-left py-2 font-medium text-gray-700">
-                {menu.label} ▼
-              </button>
-              {submenuOpen === index && (
-                <div className="pl-4 space-y-2">
-                  {menu.links.map((link, subIndex) => (
-                    <Link key={subIndex} to={link} className="block py-1 text-gray-700 hover:bg-gray-100">
-                      {t(link.split("/").pop().replace("-", " "))}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      )}
+    {[ 
+      { label: t("За Нас"), links: ["/za-ucilisteto", "/za-ucilisteto/vraboteni", "/za-ucilisteto/organi"] },
+      { label: t("Настава"), links: ["/nastava/klasno-rakovodstvo", "/nastava/dodatna-nastava", "/nastava/ekskurzii", "/nastava/izborni-predmeti"] },
+      { label: t("Документи"), links: ["/dokumenti/interni-akti", "/dokumenti/godisna-programa", "/dokumenti/razvoen-plan", "/dokumenti/samoevaluacija", "/dokumenti/finansii", "/dokumenti/drugi", "/dokumenti/obuki"] },
+      { label: t("Активности"), links: ["/aktivnosti/vonnastavni-aktivnosti", "/aktivnosti/ucenicka-zaednica"] },
+    ].map((menu, index) => (
+      <div key={index}>
+        <button onClick={() => toggleSubmenu(index)} className="w-full text-left py-2 font-medium text-gray-700">
+          {menu.label} ▼
+        </button>
+        {submenuOpen === index && (
+          <div className="pl-4 space-y-2">
+            {menu.links.map((link, subIndex) => (
+              <Link key={subIndex} to={link} className="block py-1 text-gray-700 hover:bg-gray-100">
+                {t(link.split("/").pop().replace("-", " "))}
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+)}
+
     </nav>
   );
 };
