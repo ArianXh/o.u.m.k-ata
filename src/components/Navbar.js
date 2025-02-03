@@ -68,13 +68,7 @@ const Navbar = () => {
             <ul className="absolute left-0 bg-white text-black shadow-lg rounded-lg py-2 w-48 
               hidden group-hover:flex flex-col group-hover:pointer-events-auto pointer-events-none transition duration-300">
               <li>
-                <Link to="/dokumenti/oglasi" className="block px-4 py-2 hover:bg-gray-300">{t('Огласи')}</Link>
-              </li>
-              <li>
                 <Link to="/dokumenti/interni-akti" className="block px-4 py-2 hover:bg-gray-300">{t('Интерни акти')}</Link>
-              </li>
-              <li>
-                <Link to="/dokumenti/upis-prvacinja" className="block px-4 py-2 hover:bg-gray-300">{t('Упис првачиња')}</Link>
               </li>
               <li>
                 <Link to="/dokumenti/godisna-programa" className="block px-4 py-2 hover:bg-gray-300">{t('Годишна програма')}</Link>
@@ -183,34 +177,14 @@ const Navbar = () => {
               {t('Документи')} ▼
             </button>
             {submenuOpen === 2 && (
-              <div className="pl-4 space-y-2">
-                
-                  <Link to="/dokumenti/oglasi" className="block hover:text-blue-300">{t('Огласи')}</Link>
-                
-              
-                  <Link to="/dokumenti/interni-akti" className="block hover:text-blue-300">{t('Интерни акти')}</Link>
-                
-                
-                  <Link to="/dokumenti/upis-prvacinja" className="block hover:text-blue-300">{t('Упис првачиња')}</Link>
-                
-                
-                  <Link to="/dokumenti/godisna-programa" className="block hover:text-blue-300">{t('Годишна програма')}</Link>
-                
-                
+              <div className="pl-4 space-y-2">        
+                  <Link to="/dokumenti/interni-akti" className="block hover:text-blue-300">{t('Интерни акти')}</Link>    
+                  <Link to="/dokumenti/godisna-programa" className="block hover:text-blue-300">{t('Годишна програма')}</Link>            
                   <Link to="/dokumenti/razvoen-plan" className="block hover:text-blue-300">{t('Развоен план')}</Link>
-                
-                
                   <Link to="/dokumenti/samoevaluacija" className="block hover:text-blue-300">{t('Самоевалуација на училиште')}</Link>
-                
-                
-                  <Link to="/dokumenti/finansii" className="block hover:text-blue-300">{t('Финансии')}</Link>
-                
-                
-                  <Link to="/dokumenti/drugi" className="block hover:text-blue-300">{t('Други документи')}</Link>
-                
-                
+                  <Link to="/dokumenti/finansii" className="block hover:text-blue-300">{t('Финансии')}</Link>        
+                  <Link to="/dokumenti/drugi" className="block hover:text-blue-300">{t('Други документи')}</Link> 
                   <Link to="/dokumenti/obuki" className="block hover:text-blue-300">{t('Обуки')}</Link>
-                
               </div>
             )}
 
@@ -228,7 +202,6 @@ const Navbar = () => {
               )}
           </div>
           </div>
-
           <Link to="/programi" className="block hover:text-blue-300">{t('Програми')}</Link>
           <Link to="/galerija" className="block hover:text-blue-300">{t('Галерија')}</Link>
           <Link to="/novosti" className="block hover:text-blue-300">{t('Новости')}</Link>

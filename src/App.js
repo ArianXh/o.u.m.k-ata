@@ -20,9 +20,7 @@ import Ekskurzii from './pages/Nastava/Ekskurzii';
 import IzborniPredmeti from './pages/Nastava/IzborniPredmeti';
 
 // DOKUMENTI
-import Oglasi from './pages/Dokumenti/Oglasi';
 import InterniAkti from './pages/Dokumenti/InterniAkti';
-import UpisPrvacinja from './pages/Dokumenti/UpisPrvacinja';
 import GodisnaPrograma from './pages/Dokumenti/GodisnaPrograma';
 import RazvoenPlan from './pages/Dokumenti/RazvoenPlan';
 import Samoevaluacija from './pages/Dokumenti/Samoevaluacija';
@@ -72,9 +70,7 @@ function App() {
       
 
       {/* ---------DOKUMENTI--------- */}
-      <Route path='/dokumenti/oglasi' element={< Oglasi />} />
       <Route path='/dokumenti/interni-akti' element={< InterniAkti />} />
-      <Route path='/dokumenti/upis-prvacinja' element={< UpisPrvacinja />} />
       <Route path='/dokumenti/godisna-programa' element={< GodisnaPrograma />} />
       <Route path='/dokumenti/razvoen-plan' element={< RazvoenPlan />} />
       <Route path='/dokumenti/samoevaluacija' element={< Samoevaluacija />} />
