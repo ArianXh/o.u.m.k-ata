@@ -23,10 +23,18 @@ const Obuki = () => {
     return (
         <div className="obuki-page bg-gray-50">
             <Navbar />
-            <section className="bg-blue-800 text-white py-16">
-                <div className="container mx-auto px-4 text-center">
-                <h1 className="text-4xl font-bold">{t("Планови и програми")}</h1>
-                </div>
+            {/* Hero Section */}
+            <section className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-36 text-center shadow-2xl">
+              
+              {/* Background Overlay for Depth */}
+              <div className="absolute inset-0 bg-blue-400 opacity-70"></div>
+
+              <div className="container mx-auto px-6 relative">
+                <h1 className="text-5xl md:text-7xl font-extrabold tracking-wide text-white drop-shadow-lg">
+                  {t("Обуки")}
+                </h1>
+                
+              </div>
             </section>
 
             {/* Obuki Grid Section */}

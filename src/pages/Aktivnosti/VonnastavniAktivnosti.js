@@ -13,9 +13,16 @@ const VonnastavniAktivnosti = () => {
     <div className="bg-gray-50 min-h-screen">
       <Navbar />
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-700 to-indigo-800 text-white py-24 text-center shadow-md">
-        <div className="container mx-auto px-6">
-          <h1 className="text-6xl font-extrabold tracking-wide">{t("Воннаставни Активности")}</h1>
+      <section className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-36 text-center shadow-2xl">
+        
+        {/* Background Overlay for Depth */}
+        <div className="absolute inset-0 bg-blue-400 opacity-70"></div>
+
+        <div className="container mx-auto px-6 relative">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-wide text-white drop-shadow-lg">
+            {t("Воннаставни Активности")}
+          </h1>
+          
         </div>
       </section>
 
