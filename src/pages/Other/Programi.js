@@ -48,16 +48,16 @@ const Programi = () => {
     <div className="programs-page bg-gray-50">
       <Navbar />
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-red-200 to-red-300 text-white py-32 text-center">
+      <section className="relative bg-gradient-to-r from-primary-light to-primary text-white py-32 text-center">
 
-      {/* Background Overlay for Depth */}
-      <div className="absolute inset-0 bg-black opacity-40"></div>
+        {/* Background Overlay for Depth */}
+        <div className="absolute inset-3 bg-black opacity-30"></div>
 
-      <div className="container mx-auto px-6 relative">
-        <h1 className="text-6xl md:text-7xl font-bold text-white tracking-tight leading-tight drop-shadow-lg">
-        {t("Програми")}
-        </h1>
-      </div>
+        <div className="container mx-auto px-6 relative">
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-tight drop-shadow-lg">
+            {t("Програми")}
+          </h1>
+        </div>
       </section>
 
       {/* Programs Grid Section */}

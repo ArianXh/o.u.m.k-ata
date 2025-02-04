@@ -18,30 +18,46 @@ const Navbar = () => {
 
         {/* Logo */}
         <div className="flex items-center space-x-3">
-        <Link to="/" className="text-2xl font-bold text-gray-800 hover:text-gray-600 transition">
-          <img src="/logo/logo-removebg-preview-removebg-preview.png" alt="О.У Мустафа Кемал Ататурк" className="h-auto w-auto" />
-          
+          <Link to="/" className="text-2xl font-bold text-gray-800 hover:text-gray-600 transition">
+            <img src="/logo/logo-removebg-preview-removebg-preview.png" alt="О.У Мустафа Кемал Ататурк" className="h-auto w-auto" />
           </Link>
-      </div>
+        </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 text-gray-700 text-lg">
-          <li><Link to="/" className="hover:text-red-500 transition">{t("Почетна")}</Link></li>
-
-          {/* Dropdown Menu */}
           {[
-            { label: t("За Нас"), links: ["/za-ucilisteto", "/za-ucilisteto/vraboteni", "/za-ucilisteto/organi"] },
-            { label: t("Настава"), links: ["/nastava/klasno-rakovodstvo", "/nastava/dodatna-nastava", "/nastava/ekskurzii", "/nastava/izborni-predmeti"] },
-            { label: t("Документи"), links: ["/dokumenti/interni-akti", "/dokumenti/godisna-programa", "/dokumenti/razvoen-plan", "/dokumenti/samoevaluacija", "/dokumenti/finansii", "/dokumenti/drugi", "/dokumenti/obuki"] },
-            { label: t("Активности"), links: ["/aktivnosti/vonnastavni-aktivnosti", "/aktivnosti/ucenicka-zaednica"] },
+            { label: "За Нас", links: [
+                { name: "За училиштето", url: "/za-ucilisteto" },
+                { name: "Вработени", url: "/za-ucilisteto/vraboteni" },
+                { name: "Органи", url: "/za-ucilisteto/organi" },
+              ]},
+            { label: "Настава", links: [
+                { name: "Класно раководство", url: "/nastava/klasno-rakovodstvo" },
+                { name: "Дополнителна настава", url: "/nastava/dodatna-nastava" },
+                { name: "Екскурзии", url: "/nastava/ekskurzii" },
+                { name: "Изборни предмети", url: "/nastava/izborni-predmeti" },
+              ]},
+            { label: "Документи", links: [
+                { name: "Интерни акти", url: "/dokumenti/interni-akti" },
+                { name: "Годишна програма", url: "/dokumenti/godisna-programa" },
+                { name: "Развоен план", url: "/dokumenti/razvoen-plan" },
+                { name: "Самоевалуација", url: "/dokumenti/samoevaluacija" },
+                { name: "Финансии", url: "/dokumenti/finansii" },
+                { name: "Други", url: "/dokumenti/drugi" },
+                { name: "Обуки", url: "/dokumenti/obuki" },
+              ]},
+            { label: "Активности", links: [
+                { name: "Воннаставни активности", url: "/aktivnosti/vonnastavni-aktivnosti" },
+                { name: "Ученичка заедница", url: "/aktivnosti/ucenicka-zaednica" },
+              ]},
           ].map((menu, index) => (
             <li key={index} className="relative group">
-              <button className="hover:text-red-500 transition">{menu.label} ▼</button>
+              <button className="hover:text-red-500 transition">{t(menu.label)} ▼</button>
               <ul className="absolute left-0 bg-white text-gray-800 shadow-lg rounded-lg py-2 w-52 hidden group-hover:flex flex-col transition duration-300">
                 {menu.links.map((link, subIndex) => (
                   <li key={subIndex}>
-                    <Link to={link} className="block px-4 py-2 hover:bg-gray-100 hover:text-red-500 transition">
-                      {t(link.split("/").pop().replace("-", " "))}
+                    <Link to={link.url} className="block px-4 py-2 hover:bg-gray-100 hover:text-red-500 transition">
+                      {t(link.name)}
                     </Link>
                   </li>
                 ))}
@@ -49,10 +65,22 @@ const Navbar = () => {
             </li>
           ))}
 
-          <li><Link to="/programi" className="hover:text-black transition">{t("Програми")}</Link></li>
-          <li><Link to="/galerija" className="hover:text-black transition">{t("Галерија")}</Link></li>
-          <li><Link to="/kontakt" className="hover:text-black transition">{t("Контакт")}</Link></li>
+          {[
+            { label: "Програми", url: "/programi" },
+            { label: "Галерија", url: "/galerija" },
+            { label: "Контакт", url: "/kontakt" },
+          ].map((item, index) => (
+            <li key={index}>
+              <Link to={item.url} className="hover:text-red-500 transition">
+                {t(item.label)}
+              </Link>
+            </li>
+          ))}
+
+
         </ul>
+
+
 
         {/* Language Switcher */}
         <LanguageSwitcher />
@@ -66,39 +94,39 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-{isMobileMenuOpen && (
-  <div className="md:hidden bg-white shadow-lg p-4 space-y-2">
-    {[
-      { label: "Почетна", url: "/" },
-      { label: "Програми", url: "/programi" },
-      { label: "Галерија", url: "/galerija" },
-      { label: "Контакт", url: "/kontakt" },
-    ].map((item, index) => (
-      <Link key={index} to={item.url} className="block py-2 text-gray-700 hover:bg-gray-100">
-        {t(item.label)}
-      </Link>
-    ))}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-white shadow-lg p-4 space-y-2">
+          {[
+            { label: "Почетна", url: "/" },
+            { label: "Програми", url: "/programi" },
+            { label: "Галерија", url: "/galerija" },
+            { label: "Контакт", url: "/kontakt" },
+          ].map((item, index) => (
+            <Link key={index} to={item.url} className="block py-2 text-gray-700 hover:bg-gray-100">
+              {t(item.label)}
+            </Link>
+          ))}
 
-    {[ 
-      { label: t("За Нас"), links: ["/za-ucilisteto", "/za-ucilisteto/vraboteni", "/za-ucilisteto/organi"] },
-      { label: t("Настава"), links: ["/nastava/klasno-rakovodstvo", "/nastava/dodatna-nastava", "/nastava/ekskurzii", "/nastava/izborni-predmeti"] },
-      { label: t("Документи"), links: ["/dokumenti/interni-akti", "/dokumenti/godisna-programa", "/dokumenti/razvoen-plan", "/dokumenti/samoevaluacija", "/dokumenti/finansii", "/dokumenti/drugi", "/dokumenti/obuki"] },
-      { label: t("Активности"), links: ["/aktivnosti/vonnastavni-aktivnosti", "/aktivnosti/ucenicka-zaednica"] },
-    ].map((menu, index) => (
-      <div key={index}>
-        <button onClick={() => toggleSubmenu(index)} className="w-full text-left py-2 font-medium text-gray-700">
-          {menu.label} ▼
-        </button>
-        {submenuOpen === index && (
-          <div className="pl-4 space-y-2">
-            {menu.links.map((link, subIndex) => (
-              <Link key={subIndex} to={link} className="block py-1 text-gray-700 hover:bg-gray-100">
-                {t(link.split("/").pop().replace("-", " "))}
-              </Link>
-            ))}
+        {[ 
+          { label: t("За Нас"), links: ["/za-ucilisteto", "/za-ucilisteto/vraboteni", "/za-ucilisteto/organi"] },
+          { label: t("Настава"), links: ["/nastava/klasno-rakovodstvo", "/nastava/dodatna-nastava", "/nastava/ekskurzii", "/nastava/izborni-predmeti"] },
+          { label: t("Документи"), links: ["/dokumenti/interni-akti", "/dokumenti/godisna-programa", "/dokumenti/razvoen-plan", "/dokumenti/samoevaluacija", "/dokumenti/finansii", "/dokumenti/drugi", "/dokumenti/obuki"] },
+          { label: t("Активности"), links: ["/aktivnosti/vonnastavni-aktivnosti", "/aktivnosti/ucenicka-zaednica"] },
+        ].map((menu, index) => (
+          <div key={index}>
+            <button onClick={() => toggleSubmenu(index)} className="w-full text-left py-2 font-medium text-gray-700">
+              {menu.label} ▼
+            </button>
+            {submenuOpen === index && (
+              <div className="pl-4 space-y-2">
+                {menu.links.map((link, subIndex) => (
+                  <Link key={subIndex} to={link} className="block py-1 text-gray-700 hover:bg-gray-100">
+                    {t(link.split("/").pop().replace("-", " "))}
+                  </Link>
+                ))}
+              </div>
+            )}
           </div>
-        )}
-      </div>
     ))}
   </div>
 )}

@@ -11,14 +11,14 @@ const ZaUcilisteto = () => {
   const timelineEvents = getTimelineEvents(t);
 
   return (
-    <div className="about-page bg-neutral-light font-sans">
+    <div className="about-page bg-neutral-light">
       <Navbar />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-primary-light to-primary text-white py-32 text-center">
 
         {/* Background Overlay for Depth */}
-        <div className="absolute inset-0 bg-black opacity-30"></div>
+        <div className="absolute inset-3 bg-black opacity-30"></div>
 
         <div className="container mx-auto px-6 relative">
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-tight drop-shadow-lg">

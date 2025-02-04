@@ -6,6 +6,7 @@ import ListaNovosti from '../../components/ListaNovosti';
 import Footer from '../../components/Footer';
 import ListaProgrami from '../../components/ListaProgrami';
 import GalleryPreview from '../../components/GalleryPreview';
+import KontaktirajteNe from '../../components/KontaktirajteNe';
 
 
 
@@ -39,6 +40,7 @@ const Pocetna = () => {
       <ListaProgrami />
       <GalleryPreview images={sampleImages} title="Gallery Highlights" />
 
+      <KontaktirajteNe />
       <Footer />
     </div>
   )
