@@ -49,13 +49,13 @@ const Navbar = () => {
                 { name: t("Изборни предмети"), url: "/nastava/izborni-predmeti" },
               ]},
             { label: "Документи", links: [
-                { name: t("Интерни акти"), url: "/dokumenti/interni-akti" },
+                //{ name: t("Интерни акти"), url: "/dokumenti/interni-akti" },
                 { name: t("Годишна програма"), url: "/dokumenti/godisna-programa" },
-                { name: t("Развоен план"), url: "/dokumenti/razvoen-plan" },
-                { name: t("Самоевалуација"), url: "/dokumenti/samoevaluacija" },
-                { name: t("Финансии"), url: "/dokumenti/finansii" },
-                { name: t("Други"), url: "/dokumenti/drugi" },
-                { name: t("Обуки"), url: "/dokumenti/obuki" },
+                //{ name: t("Развоен план"), url: "/dokumenti/razvoen-plan" },
+                //{ name: t("Самоевалуација"), url: "/dokumenti/samoevaluacija" },
+                //{ name: t("Финансии"), url: "/dokumenti/finansii" },
+                //{ name: t("Други"), url: "/dokumenti/drugi" },
+                //{ name: t("Обуки"), url: "/dokumenti/obuki" },
               ]},
             { label: "Активности", links: [
                 { name: t("Воннаставни активности"), url: "/aktivnosti/vonnastavni-aktivnosti" },
@@ -78,7 +78,7 @@ const Navbar = () => {
 
           {[
             { label: t("Програми"), url: "/programi" },
-            { label: t("Галерија"), url: "/galerija" },
+            //{ label: t("Галерија"), url: "/galerija" },
             { label: t("Контакт"), url: "/kontakt" },
           ].map((item, index) => (
             <li key={index}>
@@ -110,7 +110,7 @@ const Navbar = () => {
           {[
             { label: t("Почетна"), url: "/" },
             { label: t("Програми"), url: "/programi" },
-            { label: t("Галерија"), url: "/galerija" },
+            //{ label: t("Галерија"), url: "/galerija" },
             { label: t("Контакт"), url: "/kontakt" },
           ].map((item, index) => (
             <Link key={index} to={item.url} className="block py-2 text-gray-700 hover:bg-gray-100">
@@ -121,7 +121,7 @@ const Navbar = () => {
         {[ 
           { label: t("За Нас"), links: ["/za-ucilisteto", "/za-ucilisteto/vraboteni", "/za-ucilisteto/organi"] },
           { label: t("Настава"), links: ["/nastava/klasno-rakovodstvo", "/nastava/dodatna-nastava", "/nastava/ekskurzii", "/nastava/izborni-predmeti"] },
-          { label: t("Документи"), links: ["/dokumenti/interni-akti", "/dokumenti/godisna-programa", "/dokumenti/razvoen-plan", "/dokumenti/samoevaluacija", "/dokumenti/finansii", "/dokumenti/drugi", "/dokumenti/obuki"] },
+          { label: t("Документи"), links: ["/dokumenti/godisna-programa"] },
           { label: t("Активности"), links: ["/aktivnosti/vonnastavni-aktivnosti", "/aktivnosti/ucenicka-zaednica"] },
         ].map((menu, index) => (
           <div key={index}>

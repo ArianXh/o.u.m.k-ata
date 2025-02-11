@@ -2,21 +2,21 @@ import React from 'react';
 import Navbar from '../../components/Navbar';
 import HeroSlider from '../../components/HeroSlider';
 import ZaNasSection from '../../components/ZaNasSection';
-import ListaNovosti from '../../components/ListaNovosti';
+//import ListaNovosti from '../../components/ListaNovosti';
 import Footer from '../../components/Footer';
-import ListaProgrami from '../../components/ListaProgrami';
-import GalleryPreview from '../../components/GalleryPreview';
+//import ListaProgrami from '../../components/ListaProgrami';
+//import GalleryPreview from '../../components/GalleryPreview';
 import KontaktirajteNe from '../../components/KontaktirajteNe';
 
 import { useTranslation } from 'react-i18next';
-import { getNewsEvents } from '../../helpers/NewsEventsData';
-import { getGalleryImages } from '../../helpers/GalleryImages';
+//import { getNewsEvents } from '../../helpers/NewsEventsData';
+//import { getGalleryImages } from '../../helpers/GalleryImages';
 
 
 const Pocetna = () => {
-  const { t } = useTranslation();
-  const nastani = getNewsEvents(t);
-  const sliki = getGalleryImages(t);
+  //const { t } = useTranslation();
+  //const nastani = getNewsEvents(t);
+  //const sliki = getGalleryImages(t);
   
 
 
@@ -28,11 +28,11 @@ const Pocetna = () => {
       
       <ZaNasSection />
       
-      <ListaProgrami />
+      {/* <ListaProgrami /> */}
 
-      <ListaNovosti nastani={nastani} />
+      {/* <ListaNovosti nastani={nastani} /> */}
       
-      <GalleryPreview images={sliki} />
+      {/* <GalleryPreview images={sliki} /> */}
 
       <KontaktirajteNe />
       
