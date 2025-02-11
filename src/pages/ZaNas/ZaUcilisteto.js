@@ -4,18 +4,18 @@ import Footer from '../../components/Footer';
 import KontaktirajteNe from '../../components/KontaktirajteNe';
 
 import { useTranslation } from 'react-i18next';
-import { getTimelineEvents } from '../../helpers/StaffData';
+import { getSchoolInfo } from '../../helpers/StaffData';
 
 const ZaUcilisteto = () => {
   const { t } = useTranslation();
-  const timelineEvents = getTimelineEvents(t);
+  const schoolInfo = getSchoolInfo(t);
 
   return (
     <div className="about-page bg-neutral-light">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary-light to-primary text-white py-32 text-center">
+      <section className="relative bg-gradient-to-r from-primary-light to-primary text-white py-20 text-center">
 
         {/* Background Overlay for Depth */}
         <div className="absolute inset-3 bg-black opacity-30"></div>
@@ -58,19 +58,19 @@ const ZaUcilisteto = () => {
       <section className="py-16 bg-white px-6">
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-center text-primary-dark border-b-2 border-primary pb-2">
-            {t("Историјат")}
+            {t("Информации за училиштето")}
           </h2>
           <div className="mt-10 space-y-8">
-            {timelineEvents.map((event, index) => (
+            {schoolInfo.map((info, index) => (
               <div
                 key={index}
-                className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-6 bg-neutral-light p-6 rounded-lg shadow-md"
+                className="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6 bg-neutral-light p-6 rounded-lg shadow-md"
               >
-                <div className="text-primary font-bold text-2xl md:w-1/5 text-center">
-                  {event.year}
+                <div className="text-primary text-lg md:w-1/2 text-center">
+                  {info.typeOfData}
                 </div>
-                <p className="text-secondary-dark text-lg md:w-4/5 leading-relaxed">
-                  {event.event}
+                <p className="text-secondary-dark text-lg md:w-1/2 leading-relaxed text-center">
+                  {info.data}
                 </p>
               </div>
             ))}

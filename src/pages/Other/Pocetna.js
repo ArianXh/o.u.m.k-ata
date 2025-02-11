@@ -8,26 +8,16 @@ import ListaProgrami from '../../components/ListaProgrami';
 import GalleryPreview from '../../components/GalleryPreview';
 import KontaktirajteNe from '../../components/KontaktirajteNe';
 
+import { useTranslation } from 'react-i18next';
+import { getNewsEvents } from '../../helpers/NewsEventsData';
+import { getGalleryImages } from '../../helpers/GalleryImages';
 
 
 const Pocetna = () => {
-
-  const news = [
-    { id: 1, title: "Open Enrollment", excerpt: "Enroll for the 2024 academic year today!" },
-    { id: 2, title: "School Festival", excerpt: "Join us for a day of fun and excitement." },
-  ];
-
-  const sampleImages = [
-    { src: "https://via.placeholder.com/300", alt: "Image 1" },
-    { src: "https://via.placeholder.com/300", alt: "Image 2" },
-    { src: "https://via.placeholder.com/300", alt: "Image 3" },
-    { src: "https://via.placeholder.com/300", alt: "Image 4" },
-    { src: "https://via.placeholder.com/300", alt: "Image 5" },
-    { src: "https://via.placeholder.com/300", alt: "Image 6" },
-    { src: "https://via.placeholder.com/300", alt: "Image 7" },
-    { src: "https://via.placeholder.com/300", alt: "Image 8" },
-    { src: "https://via.placeholder.com/300", alt: "Image 9" },
-  ];
+  const { t } = useTranslation();
+  const nastani = getNewsEvents(t);
+  const sliki = getGalleryImages(t);
+  
 
 
   return (
@@ -35,12 +25,17 @@ const Pocetna = () => {
       <Navbar />
 
       <HeroSlider />
+      
       <ZaNasSection />
-      <ListaNovosti news={news} />
+      
       <ListaProgrami />
-      <GalleryPreview images={sampleImages} title="Gallery Highlights" />
+
+      <ListaNovosti nastani={nastani} />
+      
+      <GalleryPreview images={sliki} />
 
       <KontaktirajteNe />
+      
       <Footer />
     </div>
   )

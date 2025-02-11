@@ -27,7 +27,7 @@ const HeroSlider = () => {
 
           {/* Subheadline */}
           <p className="mt-4 text-lg text-gray-700">
-          Знаеме и можеме да работиме за доброто на сите 
+          {t("Знаеме и можеме да работиме за доброто на сите")} 
           </p>
 
           {/* Call-to-Actions */}

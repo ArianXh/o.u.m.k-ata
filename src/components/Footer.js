@@ -85,7 +85,7 @@ const Footer = () => {
         {/* Bottom Text */}
         <div className="mt-12 border-t border-neutral-300 pt-6">
           <p className="text-base text-neutral-700">
-            &copy; {new Date().getFullYear()} О.У Мустафа Кемал Ататурк. {t("Сите Права Задржани")}.
+            &copy; {new Date().getFullYear()} О.У Мустафа Кемал Ататурк. {t("Сите права се задржани")}.
           </p>
         </div>
       </div>

@@ -8,16 +8,16 @@ const Obuki = () => {
     const { t } = useTranslation();
     const obuki = [
         {
-            title: 'Obuka 1'
+            title: t('Obuka 1')
         },
         {
-            title: 'Obuka 2'
+            title: t('Obuka 2')
         },
         {
-            title: 'Obuka 3'
+            title: t('Obuka 3')
         },
         {
-            title: 'Obuka 4'
+            title: t('Obuka 4')
         },
       ];
 
@@ -25,17 +25,17 @@ const Obuki = () => {
         <div className="obuki-page bg-gray-50">
             <Navbar />
             {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary-light to-primary text-white py-32 text-center">
+            <section className="relative bg-gradient-to-r from-primary-light to-primary text-white py-20 text-center">
 
-      {/* Background Overlay for Depth */}
-        <div className="absolute inset-3 bg-black opacity-30"></div>
+            {/* Background Overlay for Depth */}
+              <div className="absolute inset-3 bg-black opacity-30"></div>
 
-        <div className="container mx-auto px-6 relative">
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-tight drop-shadow-lg">
-            {t("Обуки")}
-          </h1>
-        </div>
-      </section>
+              <div className="container mx-auto px-6 relative">
+                <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-tight drop-shadow-lg">
+                  {t("Обуки")}
+                </h1>
+              </div>
+            </section>
 
             {/* Obuki Grid Section */}
             <section className="py-12 bg-gray-50">

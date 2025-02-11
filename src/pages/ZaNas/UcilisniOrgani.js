@@ -32,11 +32,9 @@ const UcilisniOrgani = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary-light to-primary text-white py-32 text-center">
-
+      <section className="relative bg-gradient-to-r from-primary-light to-primary text-white py-20 text-center">
         {/* Background Overlay for Depth */}
         <div className="absolute inset-3 bg-black opacity-30"></div>
-
         <div className="container mx-auto px-6 relative">
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-tight drop-shadow-lg">
             {t("Училишни органи")}
@@ -46,7 +44,7 @@ const UcilisniOrgani = () => {
 
 
         {/* Tabs Section */}
-        <section id="boardSection" className="py-12 bg-gray-100">
+        <section id="boardSection" className="py-12 bg-neutral-light">
           <div className="container mx-auto px-4">
 
             {/* Tabs Navigation */}
@@ -62,11 +60,11 @@ const UcilisniOrgani = () => {
                 <button
                   key={tab.key}
                   onClick={() => setActiveTab(tab.key)}
-                  className={`py-2 px-4 rounded-lg font-semibold transition-all ${
+                  className={`py-2 px-6 rounded-lg font-semibold transition-all ${
                     activeTab === tab.key
-                      ? "bg-blue-600 text-white shadow-lg"
-                      : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                  }`}
+                    ? "bg-primary-dark text-white"
+                    : "bg-gray-200 text-gray-700"
+                } hover:bg-primary-dark hover:text-white transition`}
                 >
                   {tab.label}
                 </button>
@@ -97,12 +95,12 @@ const BoardSection = ({ teamData }) => (
     {teamData.map((member, index) => (
       <div
         key={index}
-        className="bg-gray-300 rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300"
+        className="bg-gray-200 rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300"
       >
         {/* Uncomment if images are available */}
-        <img src={member.image} alt={member.name} className="w-200 h-200 rounded-full mx-auto object-cover" />
-        <h3 className="text-2xl font-semibold text-gray-900 mt-4">{member.name}</h3>
-        <p className="text-blue-700 font-medium">{member.role}</p>
+        <img src={member.image} alt={member.name} className="w-30 h-30 rounded-full mx-auto object-cover" />
+        <h3 className="text-2xl font-semibold text-secondary-dark mt-4">{member.name}</h3>
+        <p className="text-primary-dark font-medium">{member.role}</p>
         
       </div>
     ))}

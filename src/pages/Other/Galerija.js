@@ -9,9 +9,9 @@ const Galerija = () => {
 
   const categories = ["All", "Events", "Achievements", "Campus Life", "Workshops"];
   const galleryImages = [
-    { src: "https://via.placeholder.com/400x300", category: "Events", caption: "Annual Science Fair 2023" },
-    { src: "https://via.placeholder.com/400x300", category: "Achievements", caption: "Students Receiving Awards" },
-    { src: "https://via.placeholder.com/400x300", category: "Campus Life", caption: "Beautiful Campus Gardens" },
+    { src: "/logo/MustafaKemalAtaturk.jpg", category: "Events", caption: "Annual Science Fair 2023" },
+    { src: "/logo/logo.png", category: "Achievements", caption: "Students Receiving Awards" },
+    { src: "/logo/logo.png", category: "Campus Life", caption: "Beautiful Campus Gardens" },
     { src: "https://via.placeholder.com/400x300", category: "Workshops", caption: "Coding Workshop for Beginners" },
     { src: "https://via.placeholder.com/400x300", category: "Events", caption: "Cultural Festivities" },
     { src: "https://via.placeholder.com/400x300", category: "Campus Life", caption: "Students Relaxing in the Library" },
@@ -28,7 +28,7 @@ const Galerija = () => {
     <div className="gallery-page bg-gray-50">
       <Navbar />
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary-light to-primary text-white py-32 text-center">
+      <section className="relative bg-gradient-to-r from-primary-light to-primary text-white py-20 text-center">
 
         {/* Background Overlay for Depth */}
         <div className="absolute inset-3 bg-black opacity-30"></div>
@@ -50,9 +50,9 @@ const Galerija = () => {
                 onClick={() => setActiveCategory(category)}
                 className={`py-2 px-4 rounded-full font-medium ${
                   activeCategory === category
-                    ? "bg-blue-800 text-white"
-                    : "bg-gray-200 text-gray-700"
-                } hover:bg-blue-800 hover:text-white transition`}
+                  ? "bg-primary-dark text-white"
+                  : "bg-gray-200 text-gray-700"
+              } hover:bg-primary-dark hover:text-white transition`}
               >
                 {category}
               </button>

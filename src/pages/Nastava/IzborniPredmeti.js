@@ -21,7 +21,7 @@ const IzborniPredmeti = () => {
     <div className="raspored-page bg-gray-50 min-h-screen">
       <Navbar />
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary-light to-primary text-white py-32 text-center">
+      <section className="relative bg-gradient-to-r from-primary-light to-primary text-white py-20 text-center">
 
         {/* Background Overlay for Depth */}
         <div className="absolute inset-3 bg-black opacity-30"></div>
@@ -39,7 +39,7 @@ const IzborniPredmeti = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {classes.map((item, index) => (
             <div key={index} className="bg-white shadow-lg rounded-lg p-6">
-              <h2 className="text-2xl font-semibold text-blue-700">{t(item.grade)}</h2>
+              <h2 className="text-2xl font-semibold text-primary-dark">{t(item.grade)}</h2>
               <p className="text-xl text-gray-900 mt-2">{t(item.name)}</p>
             </div>
           ))}

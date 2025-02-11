@@ -10,16 +10,14 @@ const Ekskurzii = () => {
   const { t } = useTranslation();
 
   const excursions = [
-    { title: t("Есенска еднодневна екскурзија"), file: "autumn-excursion.pdf" },
-    { title: t("Пролетна еднодневна екскурзија надвор од градот"), file: "winter-excursion.pdf" },
-    { title: t("Пролетна еднодневна екскурзија"), file: "spring-excursion.pdf" },
+    { title: t("Екскурзии"), file: "/pdf/ekskurzii.pdf" },
   ];
 
   return (
     <div className="bg-gray-50 min-h-screen">
       <Navbar />
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary-light to-primary text-white py-32 text-center">
+      <section className="relative bg-gradient-to-r from-primary-light to-primary text-white py-20 text-center">
 
         {/* Background Overlay for Depth */}
         <div className="absolute inset-3 bg-black opacity-30"></div>
@@ -34,21 +32,21 @@ const Ekskurzii = () => {
 
       {/* Content Section */}
       <section className="py-16 px-6 container mx-auto">
-        <h2 className="text-4xl font-bold text-center text-blue-700 mb-10">{t("Екскурзии, излети и настава во природа")}</h2>
-        <p className="text-lg text-gray-700 text-center mb-8">{t("Училишниот тим за организирање на екскурзиите го сочинуваат:")}</p>
-        <ul className="text-lg text-gray-700 list-disc list-inside text-center">
-          <li>Зулбеар Ракиповски</li>
-          <li>Асан Мемедовски</li>
-          <li>Ајбакан Асан</li>
-          <li>Тирона Цами</li>
-          <li>Зихни Сејди</li>
-          <li>Арсим Исламовски - родител</li>
-          <li>Ермил Ракиповски - општина</li>
+        <h2 className="text-4xl font-bold text-center text-primary-dark mb-10">{t("Екскурзии, излети и настава во природа")}</h2>
+        <p className="text-lg text-primary text-center mb-8">{t("Училишниот тим за организирање на екскурзиите го сочинуваат:")}</p>
+        <ul className="text-lg text-gray-900 list-disc list-inside text-center">
+          <li>{t("Зулбеар Ракиповски")}</li>
+          <li>{t("Асан Мемедовски")}</li>
+          <li>{t("Ајбакан Асан")}</li>
+          <li>{t("Тирона Цами")}</li>
+          <li>{t("Зихни Сејди")}</li>
+          <li>{t("Арсим Исламовски - родител")}</li>
+          <li>{t("Ермил Ракиповски - општина")}</li>
         </ul>
 
-        <h3 className="text-3xl font-bold text-blue-700 mt-10">{t("Програма за организација и изведување на екскурзии во учебната 2024/2025 година")}</h3>
-        <p className="text-lg text-gray-700 mt-4">{t("Цели на училишните екскурзии:")}</p>
-        <ul className="text-lg text-gray-700 list-disc list-inside">
+        <h3 className="text-4xl font-bold text-primary-dark mt-10">{t("Програма за организација и изведување на екскурзии во учебната 2024/2025 година")}</h3>
+        <p className="text-xl text-primary mt-4">{t("Цели на училишните екскурзии:")}</p>
+        <ul className="text-lg text-gray-900 list-disc list-inside">
           <li>{t("Проширување и совладување на знаењата")}</li>
           <li>{t("Примена на вештини и ставови преку непосредно запознавање на појавите, како и односи во природата и општествената средина")}</li>
           <li>{t("Запознавање со природните убавини, културно-историските знаменитости, индустриските и земјоделските капацитети во поблиската и пошироката околина, во согласност со воспитно-образовната работа на училиштето")}</li>
@@ -57,14 +55,14 @@ const Ekskurzii = () => {
 
 
       {/* Excursions Section */}
-      <section className="py-16 px-6 container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="py-16 px-6 container mx-auto grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-6">
         {excursions.map((excursion, index) => (
           <div key={index} className="bg-white shadow-md rounded-lg p-6 text-center flex flex-col items-center">
-            <h3 className="text-xl font-bold text-blue-700 mb-4">{excursion.title}</h3>
+            <h3 className="text-2xl font-bold text-primary-dark mb-4">{excursion.title}</h3>
             <a
-              href={`/downloads/${excursion.file}`}
+              href={`${excursion.file}`}
               download
-              className="bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:bg-blue-800 transition-all"
+              className="bg-red-600 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:hover:bg-red-500 transition-all"
             >
               <FaDownload />
               <span>{t("Преземи")}</span>
@@ -72,6 +70,7 @@ const Ekskurzii = () => {
           </div>
         ))}
       </section>
+
 
       <KontaktirajteNe />
       <Footer />

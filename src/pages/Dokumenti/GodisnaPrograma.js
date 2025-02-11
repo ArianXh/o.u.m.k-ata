@@ -10,14 +10,14 @@ const GodisnaPrograma = () => {
   const { t } = useTranslation();
 
   const godisniProgrami = [
-    { title: t("Годишна програма 2024-2025"), file: "autumn-excursion.pdf" },
+    { title: t("Годишна програма 2024-2025"), file: "/pdf/godisna_programa_24-25.pdf" },
   ];
 
   return (
     <div className="bg-gray-50 min-h-screen">
       <Navbar />
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary-light to-primary text-white py-32 text-center">
+      <section className="relative bg-gradient-to-r from-primary-light to-primary text-white py-20 text-center">
 
         {/* Background Overlay for Depth */}
         <div className="absolute inset-3 bg-black opacity-30"></div>
@@ -34,9 +34,9 @@ const GodisnaPrograma = () => {
       <section className="py-16 px-6 container mx-auto grid grid-rows-1 sm:grid-rows-1 lg:grid-rows-1 gap-6">
         {godisniProgrami.map((programi, index) => (
           <div key={index} className="bg-white shadow-md rounded-lg p-6 text-center flex flex-col items-center">
-            <h3 className="text-xl font-bold text-primary-dark mb-4">{programi.title}</h3>
+            <h3 className="text-2xl font-bold text-primary-dark mb-4">{t(programi.title)}</h3>
             <a
-              href={`/downloads/${programi.file}`}
+              href={`${programi.file}`}
               download
               className="bg-red-600 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:hover:bg-red-500 transition-all"
             >

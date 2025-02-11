@@ -6,28 +6,28 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          light: '#FDE8E8', // Soft pinkish red
-          DEFAULT: '#F47C7C', // Modern, not too strong red
-          dark: '#B91C1C', // Deep red for accents
+          light: '#FFE4E6', // Soft blush pink
+          DEFAULT: '#FF5A5F', // Vibrant modern red (Airbnb-style)
+          dark: '#B91C1C', // Deep bold red for accents
         },
         secondary: {
-          light: '#F9FAFB', // Off-white for contrast
-          DEFAULT: '#F3F4F6', // Light gray for balance
-          dark: '#374151', // Charcoal gray for text
+          light: '#F8FAFC', // Subtle cool white
+          DEFAULT: '#E2E8F0', // Sleek neutral gray-blue
+          dark: '#1E293B', // Dark slate for depth
         },
         accent: {
-          light: '#FEF3C7', // Subtle yellowish cream
-          DEFAULT: '#FACC15', // Golden yellow for highlights
-          dark: '#CA8A04', // Deep mustard for details
+          light: '#FEF9C3', // Soft pastel yellow
+          DEFAULT: '#FACC15', // Modern warm gold
+          dark: '#D97706', // Deep orange-gold
         },
         neutral: {
-          light: '#FFFFFF', // Pure white
-          DEFAULT: '#E5E7EB', // Neutral light gray
-          dark: '#1F2937', // Dark gray for headers
+          light: '#FFFFFF', // Pure white for clarity
+          DEFAULT: '#F3F4F6', // Soft neutral gray
+          dark: '#111827', // Deep navy-gray for strong contrast
         },
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Inter', 'Poppins', 'sans-serif'],
       },
     },
   },

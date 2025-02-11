@@ -1,10 +1,12 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
-const GalleryPreview = ({ images, title }) => {
+const GalleryPreview = ({ images }) => {
+  const { t } = useTranslation();
   return (
     <div className="gallery-preview bg-gray-50 py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">{title}</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">{t("Галерија")}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {images.slice(0, 8).map((image, index) => (
             <div key={index} className="relative group">
@@ -22,8 +24,8 @@ const GalleryPreview = ({ images, title }) => {
         {images.length > 8 && (
           <div className="text-center mt-8">
             <button
-              className="bg-blue-600 text-white py-2 px-4 rounded-md shadow hover:bg-blue-700 transition duration-300"
-              onClick={() => window.location.href = "/gallery"}
+              className="bg-red-600 text-white py-2 px-4 rounded-md shadow hover:bg-red-500 transition duration-300"
+              onClick={() => window.location.href = "/galerija"}
             >
               View All
             </button>

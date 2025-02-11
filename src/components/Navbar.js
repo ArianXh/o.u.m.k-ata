@@ -26,29 +26,40 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 text-gray-700 text-lg">
           {[
+            { label: t("Почетна"), url: "/" },
+          ].map((item, index) => (
+            <li key={index}>
+              <Link to={item.url} className="hover:text-red-500 transition">
+                {t(item.label)}
+              </Link>
+            </li>
+          ))}
+
+
+          {[
             { label: "За Нас", links: [
-                { name: "За училиштето", url: "/za-ucilisteto" },
-                { name: "Вработени", url: "/za-ucilisteto/vraboteni" },
-                { name: "Органи", url: "/za-ucilisteto/organi" },
+                { name: t("За училиштето"), url: "/za-ucilisteto" },
+                { name: t("Вработени"), url: "/za-ucilisteto/vraboteni" },
+                { name: t("Училишни Органи"), url: "/za-ucilisteto/organi" },
               ]},
             { label: "Настава", links: [
-                { name: "Класно раководство", url: "/nastava/klasno-rakovodstvo" },
-                { name: "Дополнителна настава", url: "/nastava/dodatna-nastava" },
-                { name: "Екскурзии", url: "/nastava/ekskurzii" },
-                { name: "Изборни предмети", url: "/nastava/izborni-predmeti" },
+                { name: t("Класно раководство"), url: "/nastava/klasno-rakovodstvo" },
+                { name: t("Додатна настава"), url: "/nastava/dodatna-nastava" },
+                { name: t("Екскурзии"), url: "/nastava/ekskurzii" },
+                { name: t("Изборни предмети"), url: "/nastava/izborni-predmeti" },
               ]},
             { label: "Документи", links: [
-                { name: "Интерни акти", url: "/dokumenti/interni-akti" },
-                { name: "Годишна програма", url: "/dokumenti/godisna-programa" },
-                { name: "Развоен план", url: "/dokumenti/razvoen-plan" },
-                { name: "Самоевалуација", url: "/dokumenti/samoevaluacija" },
-                { name: "Финансии", url: "/dokumenti/finansii" },
-                { name: "Други", url: "/dokumenti/drugi" },
-                { name: "Обуки", url: "/dokumenti/obuki" },
+                { name: t("Интерни акти"), url: "/dokumenti/interni-akti" },
+                { name: t("Годишна програма"), url: "/dokumenti/godisna-programa" },
+                { name: t("Развоен план"), url: "/dokumenti/razvoen-plan" },
+                { name: t("Самоевалуација"), url: "/dokumenti/samoevaluacija" },
+                { name: t("Финансии"), url: "/dokumenti/finansii" },
+                { name: t("Други"), url: "/dokumenti/drugi" },
+                { name: t("Обуки"), url: "/dokumenti/obuki" },
               ]},
             { label: "Активности", links: [
-                { name: "Воннаставни активности", url: "/aktivnosti/vonnastavni-aktivnosti" },
-                { name: "Ученичка заедница", url: "/aktivnosti/ucenicka-zaednica" },
+                { name: t("Воннаставни активности"), url: "/aktivnosti/vonnastavni-aktivnosti" },
+                { name: t("Ученичка заедница"), url: "/aktivnosti/ucenicka-zaednica" },
               ]},
           ].map((menu, index) => (
             <li key={index} className="relative group">
@@ -66,9 +77,9 @@ const Navbar = () => {
           ))}
 
           {[
-            { label: "Програми", url: "/programi" },
-            { label: "Галерија", url: "/galerija" },
-            { label: "Контакт", url: "/kontakt" },
+            { label: t("Програми"), url: "/programi" },
+            { label: t("Галерија"), url: "/galerija" },
+            { label: t("Контакт"), url: "/kontakt" },
           ].map((item, index) => (
             <li key={index}>
               <Link to={item.url} className="hover:text-red-500 transition">
@@ -97,10 +108,10 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white shadow-lg p-4 space-y-2">
           {[
-            { label: "Почетна", url: "/" },
-            { label: "Програми", url: "/programi" },
-            { label: "Галерија", url: "/galerija" },
-            { label: "Контакт", url: "/kontakt" },
+            { label: t("Почетна"), url: "/" },
+            { label: t("Програми"), url: "/programi" },
+            { label: t("Галерија"), url: "/galerija" },
+            { label: t("Контакт"), url: "/kontakt" },
           ].map((item, index) => (
             <Link key={index} to={item.url} className="block py-2 text-gray-700 hover:bg-gray-100">
               {t(item.label)}

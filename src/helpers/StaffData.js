@@ -1,9 +1,14 @@
 
-export const getTimelineEvents = (t) => [
-    { year: '1998', event: t("Година на изградба.") },
-    { year: '2010', event: t("Година на верификација.") },
-    { year: '2014', event: 'Recognized as the best regional high school in the country.' },
-    { year: '2017', event: 'Launched online learning platforms and integrated technology into teaching.' },
+export const getSchoolInfo = (t) => [
+    { data: '1998', typeOfData: t("Година на изградба:") },
+    { data: '2010', typeOfData: t("Година на верификација:") },
+    { data: t('Совет на Општина Центар Жупа'), typeOfData: t("Основано од: ") },
+    { data: t('2564 (м2)'), typeOfData: t("Внатрешна површина на улилиштето (м2): ")},
+    { data: t('6131 (м2)'), typeOfData: t("Училишен двор (м2): ")},
+    { data: t('Спортска сала: 640 (м2) + Игралиште 3050 (м2)'), typeOfData: t("Површина на спортски терени и игралишта: ")},
+    { data: t('31'), typeOfData: t("Број на паралелки: ")},
+    { data: t('5'), typeOfData: t("Број на комбинирани паралелки: ")},
+    { data: t('Македонски - Турски - Албански'), typeOfData: t("Јазик / јазици на кој / кои се реализира наставата во училиштето: ")},
 ]
 
 export const getAdministrativeStaff = (t) => [

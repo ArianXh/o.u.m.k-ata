@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 
 const KlasnoRakovodstvo = () => {
   const { t } = useTranslation();
-
+  
   const classes = [
     { grade: "I-т", teacher: "Синем Салчевска" },
     { grade: "I –мак- броштица", teacher: "Зини Скендер" },
@@ -46,11 +46,11 @@ const KlasnoRakovodstvo = () => {
     <div className="raspored-page bg-gray-50 min-h-screen">
       <Navbar />
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary-light to-primary text-white py-32 text-center">
+      <section className="relative bg-gradient-to-r from-primary-light to-primary text-white py-20 text-center">
 
         {/* Background Overlay for Depth */}
         <div className="absolute inset-3 bg-black opacity-30"></div>
-
+        
         <div className="container mx-auto px-6 relative">
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-tight drop-shadow-lg">
             {t("Класно раководство")}
@@ -59,9 +59,9 @@ const KlasnoRakovodstvo = () => {
       </section>
 
       {/* Работа во смени Section */}
-      <section className="py-20 bg-gradient-to-r from-gray-50 to-gray-400">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-gray-800">{t("Работа во смени")}</h2>
+          <h2 className="text-4xl font-bold text-primary-dark">{t("Работа во смени")}</h2>
           <div className="mt-6 max-w-3xl mx-auto text-lg text-gray-800 font-semibold space-y-4 bg-white shadow-lg p-6 rounded-lg border border-gray-300">
             <p>{t("- Во централното основно училиште се работи во една смена, а часовите започнуват во 8:00ч, а завршуваат во 13:25 ч.")}</p>
             <p>{t("- Во подрачното училиште во С.Броштица наставата се одвива во 2 смени, а часовите започнуваат во 8 ч и завршуваат во 17 ч.")}</p>
@@ -72,11 +72,11 @@ const KlasnoRakovodstvo = () => {
       
       {/* Class List Section */}
       <section className="container mx-auto px-6 py-12 text-center">
-        <h2 className="text-4xl font-bold text-gray-800">{t("Класно раководство")}</h2>
+        <h2 className="text-4xl font-bold text-primary-dark mb-8">{t("Класно раководство")}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {classes.map((item, index) => (
             <div key={index} className="bg-white shadow-lg rounded-lg p-6">
-              <h2 className="text-2xl font-semibold text-blue-700">{t(item.grade)}</h2>
+              <h2 className="text-2xl font-semibold text-primary-dark">{t(item.grade)}</h2>
               <p className="text-xl text-gray-900 mt-2">{t(item.teacher)}</p>
             </div>
           ))}

@@ -22,11 +22,8 @@ const Vraboteni = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary-light to-primary text-white py-32 text-center">
-
-        {/* Background Overlay for Depth */}
+      <section className="relative bg-gradient-to-r from-primary-light to-primary text-white py-20 text-center">
         <div className="absolute inset-3 bg-black opacity-30"></div>
-
         <div className="container mx-auto px-6 relative">
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-tight drop-shadow-lg">
             {t("Вработени")}
@@ -49,9 +46,9 @@ const Vraboteni = () => {
                 onClick={() => setActiveTab(tab.key)}
                 className={`py-2 px-6 rounded-lg font-semibold transition-all ${
                   activeTab === tab.key
-                    ? "bg-primary-dark text-white shadow-lg"
-                    : "bg-primary-light text-neutral-light hover:bg-neutral-dark"
-                }`}
+                  ? "bg-primary-dark text-white"
+                  : "bg-gray-200 text-gray-700"
+              } hover:bg-primary-dark hover:text-white transition`}
               >
                 {tab.label}
               </button>
@@ -79,9 +76,8 @@ const TeamSection = ({ teamData }) => (
     {teamData.map((member, index) => (
       <div
         key={index}
-        className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300"
+        className="bg-gray-200 rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300"
       >
-        {/* Uncomment if images are available */}
         <img src={member.image} alt={member.name} className="w-30 h-30 rounded-full mx-auto object-cover" />
         <h3 className="text-2xl font-semibold text-secondary-dark mt-4">{member.name}</h3>
         <p className="text-primary-dark font-medium">{member.position}</p>
