@@ -8,7 +8,7 @@ import Footer from '../../components/Footer';
 //import GalleryPreview from '../../components/GalleryPreview';
 import KontaktirajteNe from '../../components/KontaktirajteNe';
 
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 //import { getNewsEvents } from '../../helpers/NewsEventsData';
 //import { getGalleryImages } from '../../helpers/GalleryImages';
 
